@@ -1,0 +1,858 @@
+/* Custom styles for Vasiliki's website */
+
+/* Top Navigation Menu */
+.top-navigation {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #121212;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+}
+
+.top-navigation .site-navigation {
+  margin: 0;
+  padding: 0;
+  border: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-navigation .nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.top-navigation .nav-menu a {
+  color: #6d8ad6;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.top-navigation .nav-menu a:hover {
+  color: #9db3e6;
+}
+
+/* Προσθέτουμε ένα νέο εφέ για το hover */
+.top-navigation .nav-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9db3e6;
+  transition: width 0.3s ease;
+}
+
+.top-navigation .nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Dark theme as default */
+body {
+  line-height: 1.6;
+  background-color: #121212;
+  color: #e6e6e6;
+  margin-top: 0;
+}
+
+/* Avatar styling */
+.avatar img {
+  border-radius: 8px;
+  border: 3px solid #6d8ad6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 220px;
+  max-height: 280px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
+h2 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: #6d8ad6;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  margin-top: 1.5em;
+  color: #6d8ad6;
+}
+
+/* Enhance links */
+a {
+  color: #6d8ad6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #9db3e6;
+  text-decoration: underline;
+}
+
+/* Improve list styling */
+ul {
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Research highlights section */
+ul:has(li:contains("Deep Kernel Learning")) {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul:has(li:contains("Deep Kernel Learning")) li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: rgba(109, 138, 214, 0.1);
+  border-radius: 5px;
+  border-left: 4px solid #6d8ad6;
+}
+
+/* Publications styling */
+.publications {
+  margin-top: 20px;
+}
+
+.pub-row {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.title a {
+  font-weight: bold;
+}
+
+.badge {
+  background-color: #6d8ad6;
+  color: #121212;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 3px;
+  color: #e6e6e6;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #6d8ad6;
+  color: #121212;
+  border-color: #6d8ad6;
+  text-decoration: none;
+}
+
+/* Project items */
+.project-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+  background-color: rgba(109, 138, 214, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.project-title h3 {
+  margin-bottom: 10px;
+  color: #6d8ad6;
+}
+
+/* Contact section */
+.contact-section {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-item i {
+  width: 20px;
+  text-align: center;
+  color: #6d8ad6;
+}
+
+.availability {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(109, 138, 214, 0.1);
+  border-radius: 5px;
+}
+
+.availability h4 {
+  margin-top: 0;
+  color: #6d8ad6;
+}
+
+/* Header and wrapper */
+header {
+  border-bottom: 1px solid #333;
+}
+
+.wrapper {
+  background-color: #121212;
+  border-right: 1px solid #333;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 15px;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  .avatar img {
+    max-width: 150px;
+  }
+  
+  .top-navigation {
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .top-navigation .nav-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .top-navigation .nav-menu li {
+    margin: 3px;
+  }
+  
+  .top-navigation .nav-menu a {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+}
+
+/* Light mode overrides (if user has light mode preference) */
+@media (prefers-color-scheme: light) {
+  body.light-mode {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .light-mode .top-navigation {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .light-mode .top-navigation .nav-menu a {
+    color: #4b6cb7;
+  }
+  
+  .light-mode .top-navigation .nav-menu a:hover {
+    color: #2a4a8d;
+    /* Αφαιρούμε το border-bottom που δημιουργεί τη διπλή γραμμή */
+    /* border-bottom: 2px solid #4b6cb7; */
+  }
+  
+  .light-mode .avatar img {
+    border: 3px solid #4b6cb7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .light-mode .avatar img:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  .light-mode h2, .light-mode h3, .light-mode h4 {
+    color: #4b6cb7;
+  }
+  
+  .light-mode a {
+    color: #4b6cb7;
+  }
+  
+  .light-mode a:hover {
+    color: #2a4a8d;
+  }
+  
+  .light-mode ul:has(li:contains("Deep Kernel Learning")) li {
+    background-color: rgba(75, 108, 183, 0.1);
+    border-left: 4px solid #4b6cb7;
+  }
+  
+  .light-mode .pub-row {
+    border-bottom: 1px solid #eaecef;
+  }
+  
+  .light-mode .btn {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #333;
+  }
+  
+  .light-mode .btn:hover {
+    background-color: #4b6cb7;
+    color: white;
+    border-color: #4b6cb7;
+  }
+  
+  .light-mode .availability {
+    background-color: rgba(75, 108, 183, 0.1);
+  }
+  
+  .light-mode .project-item {
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(75, 108, 183, 0.05);
+  }
+  
+  .light-mode header {
+    border-bottom: 1px solid #eaecef;
+  }
+  
+  .light-mode .wrapper {
+    background-color: #fff;
+    border-right: 1px solid #eaecef;
+  }
+}
+
+/* Custom favicon */
+.favicon-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #6d8ad6;
+  color: #121212;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Page layout styles */
+.page-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.page-header h1 {
+  margin-bottom: 15px;
+  color: #6d8ad6;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #6d8ad6;
+  font-size: 0.9em;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #9db3e6;
+  text-decoration: none;
+}
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Project page styles */
+.page-content h1 {
+  color: #6d8ad6;
+  margin-bottom: 30px;
+}
+
+.page-content h2 {
+  margin-top: 40px;
+  color: #6d8ad6;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.page-content h3 {
+  margin-top: 25px;
+  color: #9db3e6;
+}
+
+.page-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-content ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.page-content li {
+  margin-bottom: 8px;
+}
+
+.page-content hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px dashed #444;
+}
+
+/* Light mode styles for page layout */
+@media (prefers-color-scheme: light) {
+  body.light-mode .page-header {
+    border-bottom-color: #ddd;
+  }
+  
+  body.light-mode .page-header h1 {
+    color: #4a5d94;
+  }
+  
+  body.light-mode .back-link {
+    color: #4a5d94;
+  }
+  
+  body.light-mode .back-link:hover {
+    color: #6d8ad6;
+  }
+  
+  body.light-mode .page-content h1,
+  body.light-mode .page-content h2 {
+    color: #4a5d94;
+    border-bottom-color: #ddd;
+  }
+  
+  body.light-mode .page-content h3 {
+    color: #6d8ad6;
+  }
+  
+  body.light-mode .page-content hr {
+    border-top-color: #ddd;
+  }
+}
+
+/* Theme Switcher */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+  background-color: rgba(18, 18, 18, 0.7);
+  padding: 8px 12px;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 48px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #333;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 16px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 16px;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #6d8ad6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.theme-icon {
+  margin: 0 8px;
+  color: #e6e6e6;
+  font-size: 16px;
+}
+
+/* Light mode styles for theme switcher */
+body.light-mode .theme-switch-wrapper {
+  background-color: rgba(240, 240, 240, 0.7);
+}
+
+body.light-mode .theme-icon {
+  color: #333;
+}
+
+body.light-mode .slider {
+  background-color: #ccc;
+}
+
+/* Project Grid Styles */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.project-card {
+  background-color: rgba(109, 138, 214, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h2 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #6d8ad6;
+  border-bottom: none;
+}
+
+.project-content p {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #6d8ad6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.project-link:hover {
+  background-color: #5a74b7;
+  text-decoration: none;
+  color: #fff;
+}
+
+.project-link i {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
+  transform: translateX(3px);
+}
+
+/* Individual Project Page Styles */
+.project-header {
+  margin-bottom: 30px;
+}
+
+.project-header h1 {
+  margin-bottom: 20px;
+  color: #6d8ad6;
+}
+
+.project-header img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Light mode styles for projects */
+body.light-mode .project-card {
+  background-color: rgba(109, 138, 214, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-content h2 {
+  color: #4a5d94;
+}
+
+body.light-mode .project-link {
+  background-color: #4a5d94;
+}
+
+body.light-mode .project-link:hover {
+  background-color: #6d8ad6;
+}
+
+body.light-mode .project-header h1 {
+  color: #4a5d94;
+}
+
+/* Responsive styles for projects */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+  
+  .project-content h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* CV Styles inspired by gmentz.github.io */
+.cv-section {
+  margin-bottom: 40px;
+  background-color: rgba(109, 138, 214, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-header {
+  background-color: #6d8ad6;
+  padding: 12px 20px;
+  color: #fff;
+}
+
+.cv-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.cv-header h3 i {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.cv-content {
+  padding: 20px;
+}
+
+.cv-item {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.cv-item:last-child {
+  margin-bottom: 0;
+}
+
+.cv-item-title {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.cv-item-subtitle {
+  color: #6d8ad6;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.cv-item-date {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.cv-item-description ul {
+  margin: 10px 0 0 0;
+  padding-left: 20px;
+}
+
+.cv-item-description li {
+  margin-bottom: 5px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  margin-bottom: 15px;
+}
+
+.skill-category-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #6d8ad6;
+}
+
+.skill-items {
+  line-height: 1.5;
+}
+
+.cv-download {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.cv-download-button {
+  display: inline-block;
+  background-color: #6d8ad6;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(109, 138, 214, 0.3);
+}
+
+.cv-download-button:hover {
+  background-color: #5a74b7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(109, 138, 214, 0.4);
+  text-decoration: none;
+  color: #fff;
+}
+
+.cv-download-button i {
+  margin-right: 8px;
+}
+
+/* Light mode styles for CV */
+body.light-mode .cv-section {
+  background-color: rgba(109, 138, 214, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .cv-header {
+  background-color: #4a5d94;
+}
+
+body.light-mode .cv-item-subtitle {
+  color: #4a5d94;
+}
+
+body.light-mode .skill-category-title {
+  color: #4a5d94;
+}
+
+body.light-mode .cv-download-button {
+  background-color: #4a5d94;
+  box-shadow: 0 4px 10px rgba(74, 93, 148, 0.3);
+}
+
+body.light-mode .cv-download-button:hover {
+  background-color: #6d8ad6;
+  box-shadow: 0 6px 15px rgba(74, 93, 148, 0.4);
+}
+
+/* Responsive styles for CV */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cv-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cv-item-title {
+    font-size: 1rem;
+  }
+  
+  .cv-item-subtitle {
+    font-size: 0.95rem;
+  }
+} 

@@ -6,6 +6,10 @@ affiliation_link: https://www.upenn.edu
 email: vtass (at) seas.upenn.edu
 personal_email: tassopoulouvasiliki@gmail.com
 
+# GitHub Pages Configuration
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://vatass.github.io" # the base hostname & protocol for your site
+
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
 keywords: machine learning, deep learning, healthcare AI, neuroimaging, Alzheimer's Disease, Gaussian processes, conformal prediction, bioengineering, statistics, electrical engineering, data science

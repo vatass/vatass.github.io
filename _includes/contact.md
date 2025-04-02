@@ -1,26 +1,24 @@
 ## Contact
 
 <div class="contact-section">
-  <p>I'm always open to research collaborations, industry partnerships, and discussions about my work. Feel free to reach out through any of the following channels:</p>
+  <p style="color: #333; font-weight: 500;">I'm open to research collaborations, industry partnerships, and discussions about research. Feel free to reach out through any of the following channels:</p>
   
   <div class="contact-info">
     <div class="contact-item">
-      <i class="fas fa-envelope"></i> <strong>Email:</strong> vtass (at) seas.upenn.edu
+      <i class="fas fa-envelope"></i> <strong style="color: #000;">Email:</strong> <span style="color: #000; font-weight: 500;">vtass (at) seas.upenn.edu</span>
     </div>
     <div class="contact-item">
-      <i class="fas fa-map-marker-alt"></i> <strong>Office:</strong> Smilow Center for Translational Research, University of Pennsylvania, Philadelphia, PA
+      <i class="fas fa-envelope"></i> <strong style="color: #000;">Personal Email:</strong> <span style="color: #000; font-weight: 500;">tassopoulouvasiliki@gmail.com</span>
     </div>
     <div class="contact-item">
-      <i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vasilikitassopoulou/" target="_blank">vasilikitassopoulou</a>
+      <i class="fas fa-map-marker-alt"></i> <strong style="color: #000;">Office:</strong> <span style="color: #000; font-weight: 500;">Goddard Laboratories, 6th Fl, Rm E605, 3700 Hamilton Walk, Philadelphia PA 19104</span>
     </div>
     <div class="contact-item">
-      <i class="fab fa-twitter"></i> <strong>Twitter:</strong> <a href="https://x.com/vtassop" target="_blank">@vtassop</a>
+      <i class="fab fa-linkedin"></i> <strong style="color: #000;">LinkedIn:</strong> <a href="https://www.linkedin.com/in/vasilikitassopoulou/" target="_blank" style="color: #000; font-weight: 700; text-decoration: none;">vasilikitassopoulou</a>
     </div>
-  </div>
-  
-  <div class="availability">
-    <h4>Current Availability</h4>
-    <p>I am currently seeking full-time opportunities starting in <strong>Summer 2025</strong>. I'm particularly interested in roles that leverage my expertise in machine learning, statistical modeling, and healthcare applications.</p>
+    <div class="contact-item">
+      <i class="fab fa-x-twitter"></i> <strong style="color: #000;">X:</strong> <a href="https://x.com/vtassop" target="_blank" style="color: #000; font-weight: 700; text-decoration: none;">@vtassop</a>
+    </div>
   </div>
 </div>
 
@@ -39,20 +37,36 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #000;
+  font-weight: 500;
 }
 .contact-item i {
   width: 20px;
   text-align: center;
-  color: #4b6cb7;
+  color: #000000;
+}
+.contact-item a:hover {
+  text-decoration: underline !important;
+  color: #444 !important;
 }
 .availability {
   margin-top: 20px;
   padding: 15px;
-  background-color: rgba(75, 108, 183, 0.1);
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
   border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 .availability h4 {
   margin-top: 0;
-  color: #4b6cb7;
+  color: #333;
+  font-weight: 700;
+}
+.availability p {
+  color: #444;
+  margin-bottom: 0;
+}
+.availability strong {
+  color: #000;
 }
 </style> 

@@ -1,9 +1,51 @@
+<style>
+.site-navigation {
+  padding: 15px 0;
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu li {
+  margin: 0 20px;
+}
+
+.nav-menu li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #0066cc;
+  background-color: rgba(0, 102, 204, 0.05);
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-menu li {
+    margin: 10px 0;
+  }
+}
+</style>
+
 <nav class="site-navigation">
   <ul class="nav-menu">
-    <li><a href="#about">About</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="/cv/">CV</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="/projects/">Projects</a></li>
+    <li><a href="/projects/">Research</a></li>
   </ul>
 </nav> 

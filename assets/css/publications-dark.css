@@ -39,7 +39,7 @@
   bottom: 0;
   right: 0;
   margin: 0 15px 10px 0;
-  background-color: #6d8ad6;
+  background-color: #ffffff;
   color: #121212;
   padding: 3px 8px;
   border-radius: 3px;
@@ -52,12 +52,12 @@
 }
 
 .title a {
-  color: #6d8ad6;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .title a:hover {
-  color: #9db3e6;
+  color: #cccccc;
   text-decoration: underline;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .author strong {
-  color: #9db3e6;
+  color: #cccccc;
 }
 
 .periodical {
@@ -93,14 +93,14 @@
 }
 
 .links a:hover {
-  background-color: #6d8ad6;
+  background-color: #ffffff;
   color: #121212;
-  border-color: #6d8ad6;
+  border-color: #ffffff;
   text-decoration: none;
 }
 
 .links i {
-  color: #6d8ad6;
+  color: #ffffff;
   margin-right: 3px;
 }
 

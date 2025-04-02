@@ -1,40 +1,81 @@
-## CV
-
 <div class="cv-section">
   <div class="cv-header">
-    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+    <h3>Education</h3>
   </div>
   <div class="cv-content">
     <div class="cv-item">
       <div class="cv-item-title">
-        <strong>University of Pennsylvania</strong>
+        <strong>University of Pennsylvania</strong>, Philadelphia PA, USA
       </div>
       <div class="cv-item-subtitle">
-        Ph.D. in Bioengineering ⌛
+        Ph.D. Candidate in Bioengineering
       </div>
       <div class="cv-item-date">
-        <em>2020 - present</em>
+        <em>2020 - Present</em>
       </div>
     </div>
     
     <div class="cv-item">
       <div class="cv-item-title">
-        <strong>University of Pennsylvania</strong>
+        <strong>Wharton School, University of Pennsylvania</strong>, Philadelphia PA, USA
       </div>
       <div class="cv-item-subtitle">
-        M.Sc. in Statistics, Wharton School 🎓
+        MSc Statistics and Data Science
       </div>
       <div class="cv-item-date">
-        <em>2022 - present</em>
+        <em>2023 - 2025</em>
       </div>
     </div>
     
     <div class="cv-item">
       <div class="cv-item-title">
-        <strong>University of Pennsylvania</strong>
+        <strong>National Technical University of Athens</strong>, Athens, Greece
       </div>
       <div class="cv-item-subtitle">
-        M.Sc. in Statistics and Data Science 🎓
+        BSc & MEng in Electrical and Computer Engineering
+      </div>
+      <div class="cv-item-date">
+        <em>2013 - 2019</em>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cv-section">
+  <div class="cv-header">
+    <h3>Research and Industry Experience</h3>
+  </div>
+  <div class="cv-content">
+    <div class="cv-item">
+      <div class="cv-item-title">
+        <strong>Artificial Intelligence in Biomedical Imaging Lab</strong>, University of Pennsylvania
+      </div>
+      <div class="cv-item-subtitle">
+        Research Assistant
+      </div>
+      <div class="cv-item-date">
+        <em>2020 - Present</em>
+      </div>
+    </div>
+    
+    <div class="cv-item">
+      <div class="cv-item-title">
+        <strong>NASA Frontier Development Lab</strong>, CA, USA
+      </div>
+      <div class="cv-item-subtitle">
+        Machine Learning Researcher
+      </div>
+      <div class="cv-item-date">
+        <em>Summer 2021</em>
+      </div>
+    </div>
+    
+    <div class="cv-item">
+      <div class="cv-item-title">
+        <strong>RetinAI Medical AG</strong>, Bern, Switzerland
+      </div>
+      <div class="cv-item-subtitle">
+        Machine Learning Research Intern
       </div>
       <div class="cv-item-date">
         <em>2019 - 2020</em>
@@ -43,25 +84,13 @@
     
     <div class="cv-item">
       <div class="cv-item-title">
-        <strong>Cornell University</strong>
+        <strong>DeepSea Technologies</strong>, Athens, Greece
       </div>
       <div class="cv-item-subtitle">
-        M.Eng. in Electrical and Computer Engineering 🎓
+        Machine Learning Intern
       </div>
       <div class="cv-item-date">
-        <em>2017 - 2018</em>
-      </div>
-    </div>
-    
-    <div class="cv-item">
-      <div class="cv-item-title">
-        <strong>National Technical University of Athens</strong>
-      </div>
-      <div class="cv-item-subtitle">
-        B.Sc. in Electrical and Computer Engineering 🎓
-      </div>
-      <div class="cv-item-date">
-        <em>2012 - 2017</em>
+        <em>2018 - 2019</em>
       </div>
     </div>
   </div>
@@ -69,150 +98,100 @@
 
 <div class="cv-section">
   <div class="cv-header">
-    <h3><i class="fas fa-briefcase"></i> Research Experience</h3>
+    <h3>Academic Service</h3>
   </div>
   <div class="cv-content">
     <div class="cv-item">
       <div class="cv-item-title">
-        <strong>AI in Biomedical Imaging Lab, University of Pennsylvania</strong>
+        <strong>Conference & Journal Reviewer</strong>
       </div>
-      <div class="cv-item-subtitle">
-        Graduate Research Assistant
-      </div>
-      <div class="cv-item-date">
-        <em>2020 - present</em>
-      </div>
-      <div class="cv-item-description">
-        <ul>
-          <li>Developing deep learning models for disease progression prediction in Alzheimer's Disease</li>
-          <li>Creating methods for uncertainty quantification in longitudinal predictions</li>
-          <li>Implementing fairness-aware algorithms for healthcare applications</li>
-        </ul>
+      <div class="cv-item-description" style="margin-top: 5px;">
+        Nature Aging, ICLR 2025, MICCAI 2024, ISBI 2024
       </div>
     </div>
     
     <div class="cv-item">
       <div class="cv-item-title">
-        <strong>Siemens Healthineers</strong>
+        <strong>Event Planning</strong>
       </div>
-      <div class="cv-item-subtitle">
-        Research Intern
-      </div>
-      <div class="cv-item-date">
-        <em>Summer 2022</em>
-      </div>
-      <div class="cv-item-description">
-        <ul>
-          <li>Developed interpretable machine learning models for medical imaging applications</li>
-          <li>Implemented privacy-preserving techniques for healthcare data</li>
-        </ul>
+      <div class="cv-item-description" style="margin-top: 5px;">
+        Co-organizer, WiML Social @ ICLR 2025<br>
+        Organizing Committee, Graduate Research Symposium in Bioengineering @ University of Pennsylvania, 2021 & 2022
       </div>
     </div>
     
     <div class="cv-item">
       <div class="cv-item-title">
-        <strong>Cornell University</strong>
+        <strong>Mentorship</strong>
       </div>
-      <div class="cv-item-subtitle">
-        Research Assistant
+      <div class="cv-item-description" style="margin-top: 5px;">
+        Author Mentor (ML4H 2024), Fatima Fellowship Mentor (2024)
       </div>
-      <div class="cv-item-date">
-        <em>2017 - 2018</em>
+    </div>
+    
+    <div class="cv-item">
+      <div class="cv-item-title">
+        <strong>Teaching</strong>
       </div>
-      <div class="cv-item-description">
-        <ul>
-          <li>Worked on signal processing algorithms for biomedical applications</li>
-          <li>Developed methods for noise reduction in physiological signals</li>
-        </ul>
+      <div class="cv-item-description" style="margin-top: 5px;">
+        Teaching Assistant - Statistics for Data Science (ESE 5420)
       </div>
     </div>
   </div>
 </div>
 
-<div class="cv-section">
-  <div class="cv-header">
-    <h3><i class="fas fa-award"></i> Honors & Awards</h3>
-  </div>
-  <div class="cv-content">
-    <div class="cv-item">
-      <div class="cv-item-title">
-        <strong>Outstanding Graduate Research Award</strong>, University of Pennsylvania
-      </div>
-      <div class="cv-item-date">
-        <em>2023</em>
-      </div>
-    </div>
-    
-    <div class="cv-item">
-      <div class="cv-item-title">
-        <strong>Best Paper Award</strong>, MICCAI Workshop on Machine Learning in Clinical Neuroimaging
-      </div>
-      <div class="cv-item-date">
-        <em>2022</em>
-      </div>
-    </div>
-    
-    <div class="cv-item">
-      <div class="cv-item-title">
-        <strong>Graduate Fellowship</strong>, University of Pennsylvania ($36K)
-      </div>
-      <div class="cv-item-date">
-        <em>2020 - 2022</em>
-      </div>
-    </div>
-    
-    <div class="cv-item">
-      <div class="cv-item-title">
-        <strong>Academic Excellence Award</strong>, National Technical University of Athens
-      </div>
-      <div class="cv-item-date">
-        <em>2017</em>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="cv-section">
-  <div class="cv-header">
-    <h3><i class="fas fa-laptop-code"></i> Skills</h3>
-  </div>
-  <div class="cv-content">
-    <div class="skills-grid">
-      <div class="skill-category">
-        <div class="skill-category-title">Programming Languages</div>
-        <div class="skill-items">Python, R, MATLAB, C++</div>
-      </div>
-      
-      <div class="skill-category">
-        <div class="skill-category-title">Machine Learning Frameworks</div>
-        <div class="skill-items">PyTorch, TensorFlow, scikit-learn</div>
-      </div>
-      
-      <div class="skill-category">
-        <div class="skill-category-title">Statistical Methods</div>
-        <div class="skill-items">Bayesian modeling, Gaussian processes, conformal prediction</div>
-      </div>
-      
-      <div class="skill-category">
-        <div class="skill-category-title">Data Analysis</div>
-        <div class="skill-items">Pandas, NumPy, SciPy, Statsmodels</div>
-      </div>
-      
-      <div class="skill-category">
-        <div class="skill-category-title">Neuroimaging Tools</div>
-        <div class="skill-items">FSL, FreeSurfer, SPM, ANTS</div>
-      </div>
-      
-      <div class="skill-category">
-        <div class="skill-category-title">Other</div>
-        <div class="skill-items">Git, Docker, HPC, LaTeX</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="cv-download">
-  <a href="{{ site.cv_link }}" class="cv-download-button">
-    <i class="fas fa-download"></i> Download Full CV
-  </a>
-</div> 
+<style>
+.cv-section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.cv-section:last-child {
+  border-bottom: none;
+}
+.cv-header {
+  margin-bottom: 20px;
+}
+.cv-header h3 {
+  color: #000;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.cv-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cv-item {
+  margin-bottom: 10px;
+}
+.cv-item-title {
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  color: #000;
+}
+.cv-item-subtitle {
+  margin-bottom: 3px;
+  color: #000;
+  font-weight: 500;
+}
+.cv-item-date {
+  font-size: 0.9em;
+  color: #000;
+  font-weight: 400;
+}
+.cv-item-description {
+  font-size: 0.95em;
+  color: #000;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.cv-item strong {
+  font-weight: 700;
+  color: #000;
+}
+</style> 

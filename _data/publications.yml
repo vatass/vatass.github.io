@@ -1,13 +1,32 @@
 main:
 
+  - title: "Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories"
+    authors: "<strong>Vasiliki Tassopoulou</strong>, Haochang Shou, Christos Davatzikos"
+    conference_short: ICLR
+    conference: "The Thirteenth International Conference on Learning Representations <strong>(ICLR)</strong>, 2025"
+    url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A4-oSJIAAAAJ&authuser=1&citation_for_view=A4-oSJIAAAAJ:Y0pCki6q_DkC"
+    pdf: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A4-oSJIAAAAJ&authuser=1&citation_for_view=A4-oSJIAAAAJ:Y0pCki6q_DkC"
+    
   - title: "Generative Models of MRI-Derived Neuroimaging Features and Associated Dataset of 18,000 Samples"
     authors: "Sai Spandana Chintapalli, Rongguang Wang, Zhijian Yang, <strong>Vasiliki Tassopoulou</strong>, Fanyang Yu, Vishnu Bashyam, Guray Erus, Pratik Chaudhari, Haochang Shou, Christos Davatzikos"
+    journal: "Nature Scientific Data"
     year: 2024
     arxiv_id: "2407.12897"
     archive: arXiv
-    url: "https://arxiv.org/abs/2407.12897"
-    bibtex: "@misc{chintapalli2024generativemodelsmriderivedneuroimaging, title={Generative models of MRI-derived neuroimaging features and associated dataset of 18,000 samples}, author={*Sai Spandana Chintapalli*, *Rongguang Wang*, *Zhijian Yang*, *Vasiliki Tassopoulou*, Fanyang Yu, Vishnu Bashyam, Guray Erus, Pratik Chaudhari, Haochang Shou, Christos Davatzikos}, year={2024}, eprint={2407.12897}, archivePrefix={arXiv}, primaryClass={q-bio.QM}, url={https://arxiv.org/abs/2407.12897}}"
-    pdf: "https://arxiv.org/pdf/2407.12897.pdf"
+    url: "https://www.nature.com/articles/s41597-024-04157-4"
+    bibtex: "@article{Chintapalli2024,
+  author = {Chintapalli, Sai Spandana and Wang, Rongguang and Yang, Zhijian and Tassopoulou, Vasiliki and Yu, Fanyang and Bashyam, Vishnu and Erus, Guray and Chaudhari, Pratik and Shou, Haochang and Davatzikos, Christos},
+  title = {Generative models of MRI-derived neuroimaging features and associated dataset of 18,000 samples},
+  journal = {Scientific Data},
+  year = {2024},
+  volume = {11},
+  number = {1},
+  pages = {1330},
+  doi = {10.1038/s41597-024-04157-4},
+  url = {https://doi.org/10.1038/s41597-024-04157-4},
+  issn = {2052-4463}
+}"
+    pdf: "https://www.nature.com/articles/s41597-024-04157-4"
     
   - title: "Applications of Generative Adversarial Networks in Neuroimaging and Clinical Neuroscience"
     authors: "Rongguang Wang, Vishnu Bashyam, Zhijian Yang, Fanyang Yu, <strong>Vasiliki Tassopoulou</strong>, Sai Spandana Chintapalli, Ioanna Skampardoni, Lasya P. Sreepada, Dushyant Sahoo, Konstantina Nikita, Ahmed Abdulkadir, Junhao Wen, Christos Davatzikos"
@@ -16,8 +35,21 @@ main:
     year: 2023
     doi: "10.1016/j.neuroimage.2023.119898"
     pdf: "https://www.sciencedirect.com/science/article/pii/S1053811923000472"
+    bibtex: "@article{WANG2023119898,
+title = {Applications of generative adversarial networks in neuroimaging and clinical neuroscience},
+journal = {NeuroImage},
+volume = {269},
+pages = {119898},
+year = {2023},
+issn = {1053-8119},
+doi = {https://doi.org/10.1016/j.neuroimage.2023.119898},
+url = {https://www.sciencedirect.com/science/article/pii/S1053811923000472},
+author = {Rongguang Wang and Vishnu Bashyam and Zhijian Yang and Fanyang Yu and Vasiliki Tassopoulou and Sai Spandana Chintapalli and Ioanna Skampardoni and Lasya P. Sreepada and Dushyant Sahoo and Konstantina Nikita and Ahmed Abdulkadir and Junhao Wen and Christos Davatzikos},
+keywords = {Generative adversarial network, GAN, Neuroimaging, Pathology, Review},
+abstract = {Generative adversarial networks (GANs) are one powerful type of deep learning models that have been successfully utilized in numerous fields. They belong to the broader family of generative methods, which learn to generate realistic data with a probabilistic model by learning distributions from real samples. In the clinical context, GANs have shown enhanced capabilities in capturing spatially complex, nonlinear, and potentially subtle disease effects compared to traditional generative methods. This review critically appraises the existing literature on the applications of GANs in imaging studies of various neurological conditions, including Alzheimer's disease, brain tumors, brain aging, and multiple sclerosis. We provide an intuitive explanation of various GAN methods for each application and further discuss the main challenges, open questions, and promising future directions of leveraging GANs in neuroimaging. We aim to bridge the gap between advanced deep learning methods and neurology research by highlighting how GANs can be leveraged to support clinical decision making and contribute to a better understanding of the structural and functional patterns of brain diseases.}
+}"
 
-  - title: "Deep Kernel Learning with Temporal Gaussian Processes for Clinical Variable Prediction in Alzheimer’s Disease"
+  - title: "Deep Kernel Learning with Temporal Gaussian Processes for Clinical Variable Prediction in Alzheimer's Disease"
     authors: "<strong>Vasiliki Tassopoulou</strong>, Fanyang Yu, Christos Davatzikos"
     conference_short: ML4H
     conference: "Machine Learning for Health Symposium <strong>(ML4H)</strong>, 2022"
@@ -29,5 +61,5 @@ main:
     month: "28 Nov"
     pdf: "https://proceedings.mlr.press/v193/tassopoulou22a/tassopoulou22a.pdf"
     url: "https://proceedings.mlr.press/v193/tassopoulou22a.html"
-    bibtex: "@InProceedings{pmlr-v193-tassopoulou22a, title = {Deep Kernel Learning with Temporal Gaussian Processes for Clinical Variable Prediction in Alzheimer’s Disease}, author = {Tassopoulou, Vasiliki and Yu, Fanyang and Davatzikos, Christos}, booktitle = {Proceedings of the 2nd Machine Learning for Health symposium}, pages = {539--551}, year = {2022}, editor = {Parziale, Antonio and Agrawal, Monica and Joshi, Shalmali and Chen, Irene Y. and Tang, Shengpu and Oala, Luis and Subbaswamy, Adarsh}, volume = {193}, series = {Proceedings of Machine Learning Research}, month = {28 Nov}, publisher = {PMLR}, pdf = {https://proceedings.mlr.press/v193/tassopoulou22a/tassopoulou22a.pdf}, url = {https://proceedings.mlr.press/v193/tassopoulou22a.html}}"
+    bibtex: "@InProceedings{pmlr-v193-tassopoulou22a, title = {Deep Kernel Learning with Temporal Gaussian Processes for Clinical Variable Prediction in Alzheimer's Disease}, author = {Tassopoulou, Vasiliki and Yu, Fanyang and Davatzikos, Christos}, booktitle = {Proceedings of the 2nd Machine Learning for Health symposium}, pages = {539--551}, year = {2022}, editor = {Parziale, Antonio and Agrawal, Monica and Joshi, Shalmali and Chen, Irene Y. and Tang, Shengpu and Oala, Luis and Subbaswamy, Adarsh}, volume = {193}, series = {Proceedings of Machine Learning Research}, month = {28 Nov}, publisher = {PMLR}, pdf = {https://proceedings.mlr.press/v193/tassopoulou22a/tassopoulou22a.pdf}, url = {https://proceedings.mlr.press/v193/tassopoulou22a.html}}"
 

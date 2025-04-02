@@ -110,7 +110,7 @@ footer {
 }
 
 a {
-  color: #6d8ad6;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -216,7 +216,7 @@ a:hover {
 
 .badge.badge-blue {
   color: #121212;
-  background-color: #6d8ad6;
+  background-color: #ffffff;
 }
 
 .badge {
@@ -233,7 +233,7 @@ a:hover {
 
 .badge.badge-light-blue {
   color: #121212;
-  background-color: #6d8ad6;
+  background-color: #ffffff;
 }
 
 .badge.badge-light-green {
@@ -284,16 +284,16 @@ a:hover {
 }
 
 .btn-outline-primary {
-  color: #6d8ad6;
+  color: #ffffff;
   background-color: transparent;
   background-image: none;
-  border-color: #6d8ad6;
+  border-color: #ffffff;
 }
 
 .btn-outline-primary:hover {
   color: #121212;
-  background-color: #6d8ad6;
-  border-color: #6d8ad6;
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 
 .z-depth-0 {
@@ -333,7 +333,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #6d8ad6;
+  color: #ffffff;
   margin: 0 0 20px;
 }
 
@@ -350,11 +350,11 @@ h1 {
 }
 
 h2 {
-  color: #6d8ad6;
+  color: #ffffff;
 }
 
 h3, h4, h5, h6 {
-  color: #6d8ad6;
+  color: #ffffff;
 }
 
 blockquote {
@@ -431,7 +431,7 @@ img {
 }
 
 .badge {
-  background-color: #6d8ad6;
+  background-color: #ffffff;
   color: #121212;
   padding: 3px 8px;
   border-radius: 3px;

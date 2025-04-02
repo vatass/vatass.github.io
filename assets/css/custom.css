@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #121212;
+  background-color: #ffffff;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   padding: 10px 0;
@@ -28,15 +28,16 @@
 }
 
 .top-navigation .nav-menu a {
-  color: #6a4c93;
+  color: #000000;
   font-weight: 500;
+  font-size: 1.3rem;
   padding: 8px 0;
   transition: all 0.2s ease;
   position: relative;
 }
 
 .top-navigation .nav-menu a:hover {
-  color: #8a6db3;
+  color: #cccccc;
 }
 
 /* Προσθέτουμε ένα νέο εφέ για το hover */
@@ -47,7 +48,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #8a6db3;
+  background-color: #cccccc;
   transition: width 0.3s ease;
 }
 
@@ -58,20 +59,56 @@
 /* Dark theme as default */
 body {
   line-height: 1.6;
-  background-color: #121212;
-  color: #e6e6e6;
+  background-color: #ffffff;
+  color: #000000;
   margin-top: 0;
+  font-size: 16px;
 }
 
 /* Avatar styling */
+.image.avatar img,
+.avatar img,
+header .avatar img,
+.wrapper .avatar img,
+section .avatar img {
+  border-radius: 0 !important;
+  max-width: 180px !important;
+  max-height: 260px !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  width: auto !important;
+}
+
 .avatar img {
-  border-radius: 8px;
-  border: 3px solid #6a4c93;
+  border-radius: 0 !important;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  max-width: 220px;
-  max-height: 280px;
+  max-width: 180px !important;
+  max-height: 260px !important;
   object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  width: auto !important;
 }
 
 .avatar img:hover {
@@ -81,30 +118,33 @@ body {
 
 p {
   margin-bottom: 1.2em;
+  font-size: 16px;
 }
 
 h2 {
   margin-top: 2em;
   margin-bottom: 1em;
-  color: #6a4c93;
+  color: #000000;
   border-bottom: 1px solid #333;
   padding-bottom: 0.3em;
+  font-size: 1.8rem;
 }
 
 h3 {
   margin-top: 1.5em;
-  color: #6a4c93;
+  color: #000000;
+  font-size: 1.5rem;
 }
 
 /* Enhance links */
 a {
-  color: #6a4c93;
+  color: #000000;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #8a6db3;
+  color: #333333;
   text-decoration: underline;
 }
 
@@ -115,6 +155,7 @@ ul {
 
 li {
   margin-bottom: 0.5em;
+  font-size: 16px;
 }
 
 /* Research highlights section */
@@ -126,9 +167,9 @@ ul:has(li:contains("Deep Kernel Learning")) {
 ul:has(li:contains("Deep Kernel Learning")) li {
   padding: 10px 15px;
   margin-bottom: 10px;
-  background-color: rgba(109, 138, 214, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  border-left: 4px solid #6a4c93;
+  border-left: 4px solid #000000;
 }
 
 /* Publications styling */
@@ -140,36 +181,55 @@ ul:has(li:contains("Deep Kernel Learning")) li {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #333;
+  background-color: #ffffff !important;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 .title a {
   font-weight: bold;
+  font-size: 17px !important;
+  text-decoration: none !important;
+}
+
+.title a:hover {
+  text-decoration: none !important;
+  color: #333333;
+}
+
+.author {
+  font-size: 16px !important;
+}
+
+.periodical {
+  font-size: 16px !important;
 }
 
 .badge {
-  background-color: #6a4c93;
+  background-color: #ffffff;
   color: #121212;
   padding: 3px 8px;
   border-radius: 3px;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 /* Button styling */
 .btn {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #333;
-  border: 1px solid #444;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
   border-radius: 3px;
-  color: #e6e6e6;
+  color: #000000;
   text-decoration: none;
   transition: all 0.2s ease;
+  font-size: 16px !important;
 }
 
 .btn:hover {
-  background-color: #6a4c93;
-  color: #121212;
-  border-color: #6a4c93;
+  background-color: #eee;
+  color: #000000;
+  border-color: #ddd;
   text-decoration: none;
 }
 
@@ -178,14 +238,39 @@ ul:has(li:contains("Deep Kernel Learning")) li {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #333;
-  background-color: rgba(109, 138, 214, 0.05);
+  background-color: rgba(0, 0, 0, 0.03);
   padding: 20px;
   border-radius: 8px;
 }
 
 .project-title h3 {
   margin-bottom: 10px;
-  color: #6a4c93;
+  color: #000000;
+  font-size: 1.5rem !important;
+}
+
+.project-content p {
+  margin-bottom: 20px;
+  flex-grow: 1;
+  font-size: 16px !important;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.project-link:hover {
+  background-color: #333333;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /* Contact section */
@@ -205,34 +290,43 @@ ul:has(li:contains("Deep Kernel Learning")) li {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 16px !important;
 }
 
 .contact-item i {
   width: 20px;
   text-align: center;
-  color: #6a4c93;
+  color: #000000;
+  font-size: 1.1rem !important;
 }
 
 .availability {
   margin-top: 20px;
   padding: 15px;
-  background-color: rgba(109, 138, 214, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 5px;
 }
 
 .availability h4 {
   margin-top: 0;
-  color: #6a4c93;
+  color: #000000;
+  font-size: 1.2rem !important;
+}
+
+.availability p {
+  font-size: 16px !important;
 }
 
 /* Header and wrapper */
 header {
   border-bottom: 1px solid #333;
+  width: 180px !important;
+  margin-left: -40px !important;
 }
 
 .wrapper {
-  background-color: #121212;
-  border-right: 1px solid #333;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e5e5;
 }
 
 /* Responsive improvements */
@@ -243,10 +337,24 @@ header {
   
   header {
     text-align: center;
+    width: 100% !important;
+    margin-left: 0 !important;
+    position: static;
   }
   
-  .avatar img {
-    max-width: 150px;
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .image.avatar img,
+  .avatar img,
+  header .avatar img,
+  .wrapper .avatar img,
+  section .avatar img {
+    max-width: 150px !important;
+    margin-left: 0 !important;
+    left: 0 !important;
   }
   
   .top-navigation {
@@ -267,8 +375,40 @@ header {
   }
   
   .top-navigation .nav-menu a {
-    font-size: 0.8rem;
+    font-size: 1rem !important;
     padding: 5px;
+  }
+  
+  p, a, li, span {
+    font-size: 15px !important;
+  }
+  
+  h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  h2 {
+    font-size: 1.6rem !important;
+  }
+  
+  h3 {
+    font-size: 1.4rem !important;
+  }
+  
+  .project-title h3 {
+    font-size: 1.4rem !important;
+  }
+  
+  .cv-header h3 {
+    font-size: 1.4rem !important;
+  }
+  
+  .cv-item-title {
+    font-size: 1.1rem !important;
+  }
+  
+  .cv-item-subtitle {
+    font-size: 1rem !important;
   }
 }
 
@@ -285,17 +425,17 @@ header {
   }
   
   .light-mode .top-navigation .nav-menu a {
-    color: #4b6cb7;
+    color: #000000;
   }
   
   .light-mode .top-navigation .nav-menu a:hover {
-    color: #2a4a8d;
+    color: #000000;
     /* Αφαιρούμε το border-bottom που δημιουργεί τη διπλή γραμμή */
     /* border-bottom: 2px solid #4b6cb7; */
   }
   
   .light-mode .avatar img {
-    border: 3px solid #4b6cb7;
+    border: 3px solid #000000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
   
@@ -304,15 +444,15 @@ header {
   }
   
   .light-mode h2, .light-mode h3, .light-mode h4 {
-    color: #4b6cb7;
+    color: #000000;
   }
   
   .light-mode a {
-    color: #4b6cb7;
+    color: #000000;
   }
   
   .light-mode a:hover {
-    color: #2a4a8d;
+    color: #000000;
   }
   
   .light-mode ul:has(li:contains("Deep Kernel Learning")) li {
@@ -322,6 +462,7 @@ header {
   
   .light-mode .pub-row {
     border-bottom: 1px solid #eaecef;
+    background-color: #ffffff !important;
   }
   
   .light-mode .btn {
@@ -331,9 +472,9 @@ header {
   }
   
   .light-mode .btn:hover {
-    background-color: #4b6cb7;
+    background-color: #000000;
     color: white;
-    border-color: #4b6cb7;
+    border-color: #000000;
   }
   
   .light-mode .availability {
@@ -362,7 +503,7 @@ header {
   justify-content: center;
   width: 32px;
   height: 32px;
-  background-color: #6a4c93;
+  background-color: #ffffff;
   color: #121212;
   font-weight: bold;
   font-size: 16px;
@@ -379,19 +520,19 @@ header {
 
 .page-header h1 {
   margin-bottom: 15px;
-  color: #6a4c93;
+  color: #000000;
 }
 
 .back-link {
   display: inline-block;
   margin-top: 10px;
-  color: #6a4c93;
+  color: #000000;
   font-size: 0.9em;
   transition: color 0.2s ease;
 }
 
 .back-link:hover {
-  color: #8a6db3;
+  color: #cccccc;
   text-decoration: none;
 }
 
@@ -402,20 +543,20 @@ header {
 
 /* Project page styles */
 .page-content h1 {
-  color: #6a4c93;
+  color: #000000;
   margin-bottom: 30px;
 }
 
 .page-content h2 {
   margin-top: 40px;
-  color: #6a4c93;
+  color: #000000;
   border-bottom: 1px solid #333;
   padding-bottom: 10px;
 }
 
 .page-content h3 {
   margin-top: 25px;
-  color: #8a6db3;
+  color: #cccccc;
 }
 
 .page-content img {
@@ -447,25 +588,25 @@ header {
   }
   
   body.light-mode .page-header h1 {
-    color: #4a5d94;
+    color: #000000;
   }
   
   body.light-mode .back-link {
-    color: #4a5d94;
+    color: #000000;
   }
   
   body.light-mode .back-link:hover {
-    color: #6a4c93;
+    color: #ffffff;
   }
   
   body.light-mode .page-content h1,
   body.light-mode .page-content h2 {
-    color: #4a5d94;
+    color: #000000;
     border-bottom-color: #ddd;
   }
   
   body.light-mode .page-content h3 {
-    color: #6a4c93;
+    color: #ffffff;
   }
   
   body.light-mode .page-content hr {
@@ -486,6 +627,11 @@ header {
   border-radius: 30px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
+}
+
+/* Απόκρυψη του επιλογέα θέματος στη σελίδα του CV */
+body.cv-page .theme-switch-wrapper {
+  display: none !important;
 }
 
 .theme-switch {
@@ -524,7 +670,7 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #6a4c93;
+  background-color: #ffffff;
 }
 
 input:checked + .slider:before {
@@ -559,10 +705,10 @@ body.light-mode .slider {
 }
 
 .project-card {
-  background-color: rgba(109, 138, 214, 0.05);
+  background-color: rgba(0, 0, 0, 0.03);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   display: flex;
@@ -602,7 +748,7 @@ body.light-mode .slider {
   font-size: 1.4rem;
   margin-top: 0;
   margin-bottom: 15px;
-  color: #6a4c93;
+  color: #000000;
   border-bottom: none;
 }
 
@@ -614,8 +760,8 @@ body.light-mode .slider {
 .project-link {
   display: inline-block;
   padding: 8px 15px;
-  background-color: #6a4c93;
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -624,9 +770,9 @@ body.light-mode .slider {
 }
 
 .project-link:hover {
-  background-color: #5a74b7;
+  background-color: #333333;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
 }
 
 .project-link i {
@@ -645,7 +791,7 @@ body.light-mode .slider {
 
 .project-header h1 {
   margin-bottom: 20px;
-  color: #6a4c93;
+  color: #000000;
 }
 
 .project-header img {
@@ -659,24 +805,26 @@ body.light-mode .slider {
 
 /* Light mode styles for projects */
 body.light-mode .project-card {
-  background-color: rgba(109, 138, 214, 0.05);
+  background-color: rgba(0, 0, 0, 0.03);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 body.light-mode .project-content h2 {
-  color: #4a5d94;
+  color: #000000;
 }
 
 body.light-mode .project-link {
-  background-color: #4a5d94;
+  background-color: #000000;
+  color: #ffffff !important;
 }
 
 body.light-mode .project-link:hover {
-  background-color: #6a4c93;
+  background-color: #333333;
+  color: #ffffff !important;
 }
 
 body.light-mode .project-header h1 {
-  color: #4a5d94;
+  color: #000000;
 }
 
 /* Responsive styles for projects */
@@ -696,38 +844,43 @@ body.light-mode .project-header h1 {
 
 /* CV Styles inspired by gmentz.github.io */
 .cv-section {
-  margin-bottom: 40px;
-  background-color: rgba(109, 138, 214, 0.05);
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.03);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cv-header {
-  background-color: #6a4c93;
-  padding: 12px 20px;
-  color: #fff;
+  background-color: #000000;
+  padding: 10px 20px;
+  color: #ffffff;
 }
 
 .cv-header h3 {
   margin: 0;
-  color: #fff;
-  font-size: 1.2rem;
+  color: #ffffff !important;
+  font-size: 1.4rem !important;
+  font-weight: 600;
   display: flex;
   align-items: center;
 }
 
 .cv-header h3 i {
   margin-right: 10px;
-  font-size: 1.1rem;
+  font-size: 1.2rem !important;
+  color: #ffffff !important;
 }
 
 .cv-content {
-  padding: 20px;
+  padding: 15px;
+  font-size: 0.95rem !important;
+  line-height: 1.5;
+  background-color: #ffffff;
 }
 
 .cv-item {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -736,106 +889,171 @@ body.light-mode .project-header h1 {
 }
 
 .cv-item-title {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
+  font-size: 1.1rem !important;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000000 !important;
+}
+
+.cv-item-title strong {
+  font-size: 1.1rem !important;
+  font-weight: 600;
 }
 
 .cv-item-subtitle {
-  color: #6a4c93;
-  margin-bottom: 5px;
-  font-size: 1rem;
+  color: #000000 !important;
+  margin-bottom: 3px;
+  font-size: 1rem !important;
+  font-weight: 500;
 }
 
 .cv-item-date {
-  color: #888;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
+  color: #000000 !important;
+  font-size: 0.95rem !important;
+  margin-bottom: 5px;
+}
+
+.cv-item-description {
+  font-size: 0.95rem !important;
+  line-height: 1.5;
+  color: #000000 !important;
 }
 
 .cv-item-description ul {
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   padding-left: 20px;
 }
 
 .cv-item-description li {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
+  font-size: 0.95rem !important;
+  line-height: 1.5;
+  color: #000000 !important;
+}
+
+.cv-item-description strong,
+.cv-item strong,
+.cv-content strong {
+  color: #000000 !important;
+  font-weight: 600;
+  font-size: 0.95rem !important;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 15px;
 }
 
 .skill-category {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .skill-category-title {
   font-weight: bold;
-  margin-bottom: 5px;
-  color: #6a4c93;
+  margin-bottom: 3px;
+  color: #000000 !important;
+  font-size: 1rem !important;
 }
 
 .skill-items {
-  line-height: 1.5;
+  line-height: 1.4;
+  color: #000000 !important;
+  font-size: 0.95rem !important;
 }
 
 .cv-download {
   text-align: center;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .cv-download-button {
   display: inline-block;
-  background-color: #6a4c93;
-  color: #fff;
-  padding: 12px 25px;
+  background-color: #000000;
+  color: #ffffff !important;
+  padding: 10px 20px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(109, 138, 214, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 0.95rem !important;
 }
 
 .cv-download-button:hover {
-  background-color: #5a74b7;
+  background-color: #333333;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(109, 138, 214, 0.4);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
   text-decoration: none;
-  color: #fff;
+  color: #ffffff !important;
 }
 
 .cv-download-button i {
   margin-right: 8px;
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
 }
 
 /* Light mode styles for CV */
 body.light-mode .cv-section {
-  background-color: rgba(109, 138, 214, 0.05);
+  background-color: rgba(0, 0, 0, 0.03);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 body.light-mode .cv-header {
-  background-color: #4a5d94;
+  background-color: #000000;
+}
+
+body.light-mode .cv-header h3 {
+  color: #ffffff !important;
+}
+
+body.light-mode .cv-header h3 i {
+  color: #ffffff !important;
+}
+
+body.light-mode .cv-item-title {
+  color: #000000 !important;
 }
 
 body.light-mode .cv-item-subtitle {
-  color: #4a5d94;
+  color: #000000 !important;
+}
+
+body.light-mode .cv-item-date {
+  color: #000000 !important;
+}
+
+body.light-mode .cv-item-description {
+  color: #000000 !important;
+}
+
+body.light-mode .cv-item-description li {
+  color: #000000 !important;
 }
 
 body.light-mode .skill-category-title {
-  color: #4a5d94;
+  color: #000000 !important;
+}
+
+body.light-mode .skill-items {
+  color: #000000 !important;
 }
 
 body.light-mode .cv-download-button {
-  background-color: #4a5d94;
-  box-shadow: 0 4px 10px rgba(74, 93, 148, 0.3);
+  background-color: #000000;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 body.light-mode .cv-download-button:hover {
-  background-color: #6a4c93;
-  box-shadow: 0 6px 15px rgba(74, 93, 148, 0.4);
+  background-color: #333333;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  color: #ffffff !important;
+}
+
+body.light-mode .cv-download-button i {
+  color: #ffffff !important;
 }
 
 /* Responsive styles for CV */
@@ -845,14 +1063,420 @@ body.light-mode .cv-download-button:hover {
   }
   
   .cv-header h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem !important;
   }
   
   .cv-item-title {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
   
   .cv-item-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.95rem !important;
   }
+  
+  .cv-item-date, 
+  .cv-item-description, 
+  .cv-item-description li, 
+  .cv-item strong, 
+  .cv-content strong,
+  .skill-items,
+  .cv-content,
+  .cv-download-button,
+  .cv-download-button i {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* CV */
+.cv-header h3 {
+  color: #ffffff !important;
+  border-bottom: none !important;
+}
+
+.cv-item-title {
+  color: #000000 !important;
+  font-size: 0.95rem !important;
+}
+
+/* Διόρθωση για τις τοποθεσίες στο CV */
+.cv-item-title * {
+  font-size: 0.95rem !important;
+}
+
+.cv-item-title strong {
+  font-size: 1.1rem !important;
+  font-weight: 600;
+}
+
+/* Επιπλέον διόρθωση για τις τοποθεσίες */
+.cv-item-title:not(strong) {
+  font-size: 0.95rem !important;
+}
+
+.cv-item-subtitle {
+  color: #000000 !important;
+}
+
+.cv-item-date {
+  color: #000000 !important;
+}
+
+.cv-item-description {
+  color: #000000 !important;
+}
+
+.cv-item strong {
+  color: #000000 !important;
+}
+
+.cv-section {
+  border-bottom: 1px solid #eee !important;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Επιπλέον διορθώσεις για συνέπεια στο CV */
+.cv-content p,
+.cv-content a,
+.cv-content li,
+.cv-content span,
+.cv-content div {
+  font-size: 0.95rem !important;
+}
+
+.cv-section p,
+.cv-section a,
+.cv-section li,
+.cv-section span,
+.cv-section div {
+  font-size: 0.95rem !important;
+}
+
+/* Ειδικός κανόνας για τις τοποθεσίες */
+.cv-item-title {
+  font-size: 0.95rem !important;
+}
+
+/* Μόνο τα strong elements μέσα στο cv-item-title έχουν μεγαλύτερο μέγεθος */
+.cv-item-title strong {
+  font-size: 1.1rem !important;
+  font-weight: 600;
+}
+
+/* Διασφάλιση ότι όλο το υπόλοιπο κείμενο στο cv-item-title έχει το σωστό μέγεθος */
+.cv-item-title:not(strong),
+.cv-item-title *:not(strong) {
+  font-size: 0.95rem !important;
+}
+
+@media (max-width: 768px) {
+  .cv-content p,
+  .cv-content a,
+  .cv-content li,
+  .cv-content span,
+  .cv-content div,
+  .cv-section p,
+  .cv-section a,
+  .cv-section li,
+  .cv-section span,
+  .cv-section div,
+  .cv-item-title:not(strong),
+  .cv-item-title *:not(strong) {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Αντικατάσταση των μπλε χρωμάτων στα project items και άλλα στοιχεία */
+.project-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.availability {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+/* Light mode styles for projects */
+body.light-mode .project-card {
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-link:hover {
+  background-color: #333333;
+  color: #ffffff !important;
+}
+
+/* Light mode overrides */
+.light-mode ul:has(li:contains("Deep Kernel Learning")) li {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #000000;
+}
+
+.light-mode .availability {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .project-item {
+  border-bottom: 1px solid #ddd;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Force Light Mode */
+html, body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body {
+  background-color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+  font: 16px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.wrapper {
+  background-color: #ffffff !important;
+  width: 860px;
+  margin: 0 auto;
+  border-right: 1px solid #e5e5e5;
+}
+
+section {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  width: 650px;
+  float: right;
+  padding-top: 4.0em;
+  padding-bottom: 50px;
+  margin-left: 40px;
+}
+
+header {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  width: 180px !important;
+  float: left;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding-top: 4.0em;
+  text-align: center;
+  margin-left: -40px !important;
+}
+
+h1 {
+  font-size: 2rem !important;
+  color: #000000 !important;
+}
+
+h2 {
+  font-size: 1.8rem !important;
+  color: #000000 !important;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+  color: #000000 !important;
+}
+
+h4, h5, h6 {
+  color: #000000 !important;
+  font-size: 1.2rem !important;
+}
+
+p, a, li, span {
+  color: #000000 !important;
+  font-size: 16px !important;
+}
+
+a:hover {
+  color: #333333 !important;
+}
+
+.top-navigation {
+  background-color: #ffffff !important;
+}
+
+.nav-menu a {
+  color: #000000 !important;
+}
+
+.social-icons a {
+  color: #000000 !important;
+}
+
+.social-icons a:hover {
+  color: #000000 !important;
+}
+
+autocolor {
+  color: #595959 !important;
+}
+
+email {
+  color: #000000 !important;
+}
+
+/* Publications */
+.publications h2 {
+  color: #000000 !important;
+}
+
+.publications .title a {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.publications .title a:hover {
+  text-decoration: none !important;
+  color: #333333 !important;
+}
+
+.publications .author {
+  color: #000000 !important;
+}
+
+.publications .periodical {
+  color: #000000 !important;
+}
+
+.publications .btn {
+  background-color: #f5f5f5 !important;
+  color: #000000 !important;
+  border: 1px solid #ddd !important;
+}
+
+.publications .btn:hover {
+  background-color: #eee !important;
+  color: #000000 !important;
+}
+
+.publications strong {
+  color: #000000 !important;
+}
+
+.publications .pub-row {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+/* News */
+.news-section h2 {
+  color: #000000 !important;
+  font-size: 1.8rem !important;
+}
+
+.news-item {
+  color: #000000 !important;
+  font-size: 16px !important;
+  margin-bottom: 10px;
+}
+
+.news-item strong {
+  color: #000000 !important;
+  font-size: 16px !important;
+  font-weight: 600;
+}
+
+.news-item span {
+  color: #000000 !important;
+  font-size: 16px !important;
+}
+
+/* Avatar container styling */
+.image.avatar,
+header .image.avatar,
+.wrapper .image.avatar,
+section .image.avatar {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+  display: block !important;
+}
+
+#header .image.avatar {
+  margin: 0 !important;
+  width: auto !important;
+}
+
+/* Override all avatar styles - added at the end to ensure it takes precedence */
+.image.avatar img {
+  border-radius: 0 !important;
+  max-width: 180px !important;
+  max-height: 260px !important;
+  margin-left: 0 !important;
+  position: relative !important;
+  left: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+
+@media (max-width: 768px) {
+  .image.avatar img {
+    max-width: 150px !important;
+    margin-left: 0 !important;
+    left: 0 !important;
+  }
+}
+
+/* Footer styles */
+section p small,
+section p small a {
+  font-size: 0.95rem !important;
+  color: #000000 !important;
+}
+
+section p small a:hover {
+  color: #333333 !important;
+}
+
+/* Ensure all text in project pages is dark black */
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6,
+.page-content p,
+.page-content li,
+.page-content a,
+.page-content span,
+.page-content strong,
+.page-content em,
+.page-content blockquote,
+.page-content code,
+.page-content ul,
+.page-content ol,
+.page-content dl,
+.page-content table,
+.page-content figcaption,
+.page-content small {
+  color: #000000 !important;
+}
+
+.page-content .periodical,
+.page-content .author,
+.page-content .title,
+.page-content .badge,
+.page-content .links,
+.page-content .btn {
+  color: #000000 !important;
+}
+
+/* Ensure figure captions are visible */
+.page-content figure figcaption,
+.page-content img + em {
+  color: #000000 !important;
+  font-style: italic;
+  margin-top: 8px;
+  display: block;
 } 

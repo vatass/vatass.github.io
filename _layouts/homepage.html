@@ -26,16 +26,200 @@
     <link rel="stylesheet" href="{{ '/assets/css/font.css' | relative_url }}">
     {% endif %}
     
-    {% if site.auto_dark_mode %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}">
-    {% else %}
-    <link rel="stylesheet" href="{{ '/assets/css/style-dark.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/publications-dark.css' | relative_url }}">
-    {% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/style-no-dark-mode.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/publications-no-dark-mode.css' | relative_url }}">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+    <!-- Force Light Mode -->
+    <style>
+      html, body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      body {
+        background-color: #ffffff !important;
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+      }
+      .wrapper {
+        background-color: #ffffff !important;
+      }
+      section {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        margin-left: 40px !important;
+      }
+      h1 {
+        font-size: 1.8rem !important;
+        color: #000000 !important;
+      }
+      h2 {
+        font-size: 1.8rem !important;
+        color: #000000 !important;
+      }
+      h3 {
+        font-size: 1.5rem !important;
+        color: #000000 !important;
+      }
+      h4, h5, h6 {
+        font-size: 1.2rem !important;
+        color: #000000 !important;
+      }
+      p, a, li, span {
+        color: #000000 !important;
+        font-size: 16px !important;
+      }
+      a:hover {
+        color: #333333 !important;
+      }
+      header {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        width: 180px !important;
+        margin-left: -40px !important;
+      }
+      .top-navigation {
+        background-color: #ffffff !important;
+      }
+      .nav-menu a {
+        color: #000000 !important;
+        font-size: 1.3rem !important;
+        font-weight: 500 !important;
+      }
+      .social-icons a {
+        color: #000000 !important;
+        font-size: 1.1rem !important;
+      }
+      .social-icons a:hover {
+        color: #333333 !important;
+      }
+      autocolor {
+        color: #000000 !important;
+        font-size: 16px !important;
+      }
+      email {
+        color: #000000 !important;
+        font-size: 16px !important;
+      }
+      position {
+        font-size: 1.2rem !important;
+      }
+      
+      /* CV Styles */
+      .cv-section {
+        background-color: rgba(0, 0, 0, 0.03) !important;
+      }
+      
+      .cv-header {
+        background-color: #000000 !important;
+      }
+      
+      .cv-header h3 {
+        color: #ffffff !important;
+        border-bottom: none !important;
+      }
+      
+      .cv-header h3 i {
+        color: #ffffff !important;
+      }
+      
+      .cv-content {
+        background-color: #ffffff !important;
+      }
+      
+      .cv-item-title, 
+      .cv-item-subtitle, 
+      .cv-item-date, 
+      .cv-item-description, 
+      .cv-item-description li, 
+      .cv-item strong, 
+      .cv-content strong {
+        color: #000000 !important;
+      }
+      
+      .skill-category-title, 
+      .skill-items {
+        color: #000000 !important;
+      }
+      
+      .cv-download-button {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+      }
+      
+      .cv-download-button:hover {
+        background-color: #333333 !important;
+        color: #ffffff !important;
+      }
+      
+      .cv-download-button i {
+        color: #ffffff !important;
+      }
+      
+      /* Avatar styling override */
+      .image.avatar, header .image.avatar {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        line-height: 0 !important;
+        font-size: 0 !important;
+        display: block !important;
+      }
+      
+      .image.avatar img, .avatar img {
+        border-radius: 0 !important;
+        max-width: 180px !important;
+        max-height: 260px !important;
+        margin: 0 !important;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        width: auto !important;
+        display: block !important;
+      }
+      @media (max-width: 768px) {
+        .image.avatar img, .avatar img {
+          max-width: 150px !important;
+          margin: 0 !important;
+          margin-left: 0 !important;
+          left: 0 !important;
+        }
+        header {
+          width: 100% !important;
+          margin-left: 0 !important;
+          position: static !important;
+        }
+        section {
+          width: 100% !important;
+          margin-left: 0 !important;
+        }
+        body {
+          font-size: 15px !important;
+        }
+        .nav-menu a {
+          font-size: 1.2rem !important;
+        }
+        h1 {
+          font-size: 1.8rem !important;
+        }
+        h2 {
+          font-size: 1.6rem !important;
+        }
+        h3 {
+          font-size: 1.4rem !important;
+        }
+      }
+    </style>
 
     <!-- Google Analytics -->
     {% if site.google_analytics %}
@@ -79,16 +263,6 @@
 
   </head>
   <body>
-    <!-- Theme Switcher -->
-    <div class="theme-switch-wrapper">
-      <i class="fas fa-moon theme-icon"></i>
-      <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider"></div>
-      </label>
-      <i class="fas fa-sun theme-icon"></i>
-    </div>
-
     <!-- Top Navigation Menu -->
     <div class="top-navigation">
       {% include navigation.html %}
@@ -98,53 +272,58 @@
       <header>
         
         {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        <div style="margin-bottom: 20px !important;">
+          <a class="image avatar" style="margin: 0 !important; padding: 0 !important; border: none !important; line-height: 0 !important; font-size: 0 !important; display: block !important;"><img src="{{ site.avatar }}" alt="avatar" style="border-radius: 0 !important; max-width: 180px !important; max-height: 260px !important; margin: 0 !important; padding: 0 !important; border: none !important; position: relative; left: 0; top: 0; display: block !important;" /></a>
+        </div>
         {% endif %}
 
-        <h1>{{ site.title }}</h1>
+        <h1 style="font-size: 1.7rem !important;">{{ site.title }}</h1>
 
         {% if site.position %}
-        <position style="font-size:1.10rem;">{{ site.position }}</position>
+        <position style="font-size:1.2rem;">{{ site.position }}</position>
         <br>
         {% endif %}
         {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
+        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor style="font-size:16px;">{{ site.affiliation }}</autocolor></a>
         <br>
         {% endif %}
         {% if site.email %}
-        <email>{{ site.email }}</email>
+        <email style="font-size:16px;">{{ site.email }}</email>
+        <br>
+        {% endif %}
+        {% if site.personal_email %}
+        <!-- Το προσωπικό email εμφανίζεται μόνο στην ενότητα επικοινωνίας -->
         {% endif %}
 
-        <br>
         <br>
         <div class="social-icons">
         {% if site.google_scholar %}
         <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}">
-          <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
+          <i class="ai ai-google-scholar" style="font-size:1.3rem"></i>
         </a>  
         {% endif %}
 
         {% if site.cv_link %}
         <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
-          <i class="ai ai-cv" style="font-size:1.3rem;"></i>
+          <i class="ai ai-cv" style="font-size:1.4rem;"></i>
         </a>
         {% endif %}
 
         {% if site.github_link %}
         <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
-          <i class="fab fa-github"></i>
+          <i class="fab fa-github" style="font-size:1.3rem;"></i>
         </a>
         {% endif %}
 
         {% if site.linkedin %}
         <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
-          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-linkedin" style="font-size:1.3rem;"></i>
         </a>
         {% endif %}
 
         {% if site.twitter %}
         <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
-          <i class="fab fa-x-twitter"></i>
+          <i class="fab fa-x-twitter" style="font-size:1.3rem;"></i>
         </a>
         {% endif %}
         </div>
@@ -178,28 +357,19 @@
     </script>
     {% endif %}
 
-    <!-- Theme Switcher Script -->
+    <!-- Force Light Mode Script -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        const toggleSwitch = document.querySelector('#checkbox');
-        const currentTheme = localStorage.getItem('theme');
+        // Αφαίρεση οποιασδήποτε κλάσης dark-mode
+        document.body.classList.remove('dark-mode');
+        document.documentElement.classList.remove('dark-mode');
         
-        if (currentTheme) {
-          document.body.classList.toggle('light-mode', currentTheme === 'light');
-          toggleSwitch.checked = currentTheme === 'light';
-        }
+        // Προσθήκη κλάσης light-mode
+        document.body.classList.add('light-mode');
+        document.documentElement.classList.add('light-mode');
         
-        function switchTheme(e) {
-          if (e.target.checked) {
-            document.body.classList.add('light-mode');
-            localStorage.setItem('theme', 'light');
-          } else {
-            document.body.classList.remove('light-mode');
-            localStorage.setItem('theme', 'dark');
-          }
-        }
-        
-        toggleSwitch.addEventListener('change', switchTheme, false);
+        // Αποθήκευση της προτίμησης στο localStorage
+        localStorage.setItem('theme', 'light');
       });
     </script>
   </body>

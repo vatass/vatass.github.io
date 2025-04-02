@@ -2,29 +2,39 @@
 layout: homepage
 ---
 
+<style>
+  /* Στυλ για τους συνδέσμους ώστε να είναι πιο ευδιάκριτοι */
+  a {
+    color: #0066cc; /* Έντονο μπλε χρώμα */
+    text-decoration: underline; /* Υπογράμμιση */
+    font-weight: 500; /* Ελαφρώς πιο έντονη γραμματοσειρά */
+  }
+  
+  a:hover {
+    color: #004499; /* Πιο σκούρο μπλε στο hover */
+    text-decoration: underline;
+  }
+</style>
+
 ## About
 
 <a id="about"></a>
+I am a Ph.D. Candidate in Bioengineering at the University of Pennsylvania, advised by [Prof. Christos Davatzikos](https://scholar.google.com/citations?user=RId1qZ8AAAAJ&hl=en) in the [AI2D: Center for AI and Data Science for Integrated Diagnostics](https://ai2d.med.upenn.edu/). I'm also a member of [PennSIVE](https://www.dbeicoe.med.upenn.edu/pennsive) (Penn Statistics in Imaging and Visualization Endeavor), where I collaborate closely with [Prof. Haochang Shou](https://scholar.google.com/citations?user=DFwje0AAAAAJ&hl=en). Alongside my Ph.D., I have completed an M.Sc. in Statistics and Data Science at the Wharton School, focusing on Bayesian statistics and statistical inference. My M.Sc. thesis, advised by [Prof. Edgar Dobriban](https://scholar.google.com/citations?user=aGvH4yMAAAAJ&hl=en), explored Conformal Prediction for Longitudinal Biomarker Trajectories. Prior to that, I completed my undergraduate studies in the field of Electrical Engineering and Computer Science at the National Technical University of Athens, under the supervision of [Prof. Petros Maragos](https://scholar.google.com/citations?user=A2XydgGCY9gC&hl=en), where I conducted research on handwritten text recognition. 
 
-I am a Ph.D. Candidate in Bioengineering at the University of Pennsylvania, advised by [Prof. Christos Davatzikos](https://scholar.google.com/citations?user=RId1qZ8AAAAJ&hl=en) in the [Artificial Intelligence in Biomedical Imaging Laboratory](https://ai2d.med.upenn.edu/). I'm also a member of [PennSIVE](https://www.dbeicoe.med.upenn.edu/pennsive) (Penn Statistics in Imaging and Visualization Endeavor), where I collaborate closely with [Prof. Haochang Shou](https://scholar.google.com/citations?user=DFwje0AAAAAJ&hl=en). Alongside my Ph.D., I am pursuing an M.Sc. in Statistics at the Wharton School, with a focus on Conformal Prediction for Longitudinal Trajectories, advised by [Prof. Edgar Dobriban](https://scholar.google.com/citations?user=aGvH4yMAAAAJ&hl=en). Prior to my PhD, 
+<div class="availability">
+  <h4>Current Availability</h4>
+  <p>I am currently seeking internships for <strong>Summer 2025</strong> and full-time opportunities starting in late <strong>Fall 2025</strong>. I'm particularly interested in roles that leverage my expertise in machine learning, statistical modeling in applications to health or finance.</p>
+</div>
 
-I hold an M.Sc. in Statistics and Data Science and an M.Eng. in Electrical and Computer Engineering, providing me with a strong interdisciplinary foundation across engineering, statistics, and computer science.
-
-My research interests encompass machine learning and deep learning, with particular attention to their applications in healthcare. Throughout my Ph.D., I have gained extensive experience working with statistical models, Bayesian methods, and deep kernel learning. My research leverages imaging and genomic data to predict the progression of neurodegeneration, particularly in Alzheimer's Disease and Brain Aging. My work emphasizes the intersection of AI and healthcare, blending statistical rigor with machine learning techniques. I primarily develop deep learning models for progression prediction, with a strong focus on fairness and interpretability.
-\n{% include_relative _includes/contact.md %}
-
-
-
-
-<a id="publications"></a>
-
-{% include_relative _includes/publications.md %}
-
-
+{% include_relative _includes/contact.md %}
 
 <a id="news"></a>
 
 {% include_relative _includes/news.md %}
+
+<a id="publications"></a>
+
+{% include_relative _includes/publications.md %}
 
 <!--
 ## Career Interests
@@ -33,8 +43,6 @@ I am currently seeking **full-time** industry roles in applied AI/Statistics Res
 - Predictive modeling for healthcare applications
 - Statistical methods for time-series data
 - Fairness and interpretability in machine learning
-
-
 {% include_relative _includes/services.md %}
 -->
 

@@ -8,11 +8,6 @@ layout: homepage
 I am a Ph.D. Candidate in Bioengineering at the University of Pennsylvania, advised by [Prof. Christos Davatzikos](https://scholar.google.com/citations?user=RId1qZ8AAAAJ&hl=en) in the [Artificial Intelligence in Biomedical Imaging Laboratory](https://ai2d.med.upenn.edu/). I'm also a member of [PennSIVE](https://www.dbeicoe.med.upenn.edu/pennsive) (Penn Statistics in Imaging and Visualization Endeavor), where I collaborate closely with [Prof. Haochang Shou](https://scholar.google.com/citations?user=DFwje0AAAAAJ&hl=en). Alongside my Ph.D., I have completed an M.Sc. in Statistics and Data Science at the Wharton School, focusing on Bayesian statistics and statistical inference. My M.Sc. thesis, advised by [Prof. Edgar Dobriban](https://scholar.google.com/citations?user=aGvH4yMAAAAJ&hl=en), explored Conformal Prediction for Longitudinal Biomarker Trajectories.
 
 \n{% include_relative _includes/contact.md %}
-<a id="publications"></a>
-
-{% include_relative _includes/publications.md %}
-
-<a id="news"></a>
 
 {% include_relative _includes/news.md %}
 

@@ -70,6 +70,14 @@ permalink: /projects/adaptive-shrinkage/
   <div class="authors-emails">
     {vasiliki.tassopoulou, hshou, christos.davatzikos}@pennmedicine.upenn.edu
   </div>
+  <div style="margin-top: 20px;">
+    <a href="https://openreview.net/forum?id=peX9zpWgg4" target="_blank" style="text-decoration: none; margin: 0 10px;">
+      <img src="https://img.shields.io/badge/Paper-OpenReview-blue.svg" alt="Paper">
+    </a>
+    <a href="https://github.com/vatass/AdaptiveShrinkageDKGP" target="_blank" style="text-decoration: none; margin: 0 10px;">
+      <img src="https://img.shields.io/badge/Code-GitHub-black.svg" alt="GitHub">
+    </a>
+  </div>
 </div>
 
 <div style="text-align: center;">
@@ -79,20 +87,23 @@ permalink: /projects/adaptive-shrinkage/
 
 ## Abstract
 
-Understanding how brain biomarkers change over time is crucial for diagnosing and tracking neurological diseases like Alzheimer's. However, predicting these biomarker trajectories is challenging due to biological variability, inconsistent imaging protocols, and sparse, irregular data collection. Our recent work, presented at **ICLR 2025**, introduces a powerful new approach: **Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression**. This method provides a more accurate and personalized way to model brain changes over time.
+Understanding how brain biomarkers change over time is crucial for diagnosing and tracking neurological diseases like Alzheimer's. However, predicting these biomarker trajectories is challenging due to biological variability, inconsistent imaging protocols, and sparse, irregular data collection. Our recent work, presented at **ICLR 2025**, introduces a new approach that tackles the afforementioned challenges: **Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression**. This method provides a more accurate and personalized way to model brain changes over time.
 
 ## The Challenge: Predicting Brain Biomarkers Accurately
-
 Longitudinal neuroimaging studies track changes in brain structure, but the data is often incomplete or misaligned across individuals. Traditional statistical models, such as linear mixed-effects models and generalized additive models, struggle to capture complex, non-linear brain trajectory patterns. On the other hand, deep learning models can learn from vast amounts of data but may not adapt well to individual patient variations.
 
 ## Our Solution: Adaptive Shrinkage Estimation with Deep Kernel Learning
 
-We propose a novel framework that balances global population trends with individual-specific nuances. Our approach, **Deep Kernel Gaussian Processes with Adaptive Shrinkage Estimation (DKGP-ASE)**, integrates two components:
+We propose a novel framework that balances global population trends with individual-specific nuances. Our approach, **Deep Kernel Gaussian Processes with Adaptive Shrinkage Estimation **, integrates two components:
 
 - **Population Model (p-DKGP):** Trained on large datasets to learn general brain trajectory trends.
 - **Subject-Specific Model (ss-DKGP):** Personalized predictions based on an individual's limited available data.
 
 As shown in the figure above, our method combines these components through adaptive shrinkage estimation to create personalized predictions that are more accurate than either component alone.
+
+## Results 
+
+
 
 ## Why It Matters: Improved Forecasting and Clinical Relevance
 
@@ -101,8 +112,6 @@ Our method significantly outperforms traditional models in predicting brain biom
 - Higher predictive accuracy compared to state-of-the-art machine learning and statistical methods.
 - Improved uncertainty quantification, ensuring more reliable forecasts.
 - Robust generalization across different neuroimaging cohorts, demonstrating clinical applicability.
-
-## Beyond Brain Biomarkers: Potential Applications
 
 While our study focuses on neuroimaging data, our method has broad applications in:
 

@@ -4,29 +4,33 @@ permalink: /projects/adaptive-shrinkage/
 ---
 
 <style>
-  /* Reset default page styles */
+  /* Reset layout styles */
+  article.post {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  .post-header {
+    display: none !important;
+  }
+
+  .post-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .page-content {
-    max-width: 1200px !important;
+    padding: 0 !important;
     margin: 0 auto !important;
-    padding: 0 40px !important;
+    max-width: 1200px !important;
     width: 100% !important;
     background: transparent !important;
   }
 
-  /* Remove any default margins/padding */
-  body, html {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-  }
-
   .wrapper {
+    max-width: none !important;
     margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-  }
-
-  .page-content .wrapper {
     padding: 0 !important;
     background: transparent !important;
   }
@@ -35,20 +39,13 @@ permalink: /projects/adaptive-shrinkage/
   .project-container {
     max-width: 100%;
     margin: 0 auto;
-    padding-top: 2rem;
-  }
-
-  /* Center and widen the content */
-  .page-content {
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 40px !important;
-    width: 100% !important;
+    padding: 40px;
+    background: transparent !important;
   }
 
   @media (max-width: 768px) {
-    .page-content {
-      padding: 0 20px !important;
+    .project-container {
+      padding: 20px;
     }
   }
 

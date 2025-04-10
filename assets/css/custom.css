@@ -305,12 +305,11 @@ ul:has(li:contains("Deep Kernel Learning")) li {
 
 /* Header and wrapper */
 header {
-  width: 160px;
+  width: 200px;
   float: left;
   position: fixed;
   padding-top: 2em;
   text-align: center;
-  margin-left: -40px;
 }
 
 header h1 {
@@ -511,7 +510,7 @@ header email {
 }
 
 .wrapper {
-  width: 860px;
+  width: 1200px;
   margin: 0 auto;
   position: relative;
   min-height: 100vh;
@@ -527,19 +526,18 @@ header email {
 }
 
 section {
-  width: 600px;
+  width: 900px;
   float: right;
   padding-top: 2em;
   padding-bottom: 50px;
-  margin-left: 200px;
+  margin-left: 220px;
   background-color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .wrapper {
-    width: 100%;
-    padding: 15px;
-    margin: 0;
+    width: 95%;
+    padding: 0 15px;
   }
 
   header {
@@ -548,7 +546,6 @@ section {
     position: relative;
     margin: 0;
     padding: 20px 0;
-    text-align: center;
   }
 
   section {
@@ -556,14 +553,6 @@ section {
     float: none;
     margin: 0;
     padding: 20px 0;
-  }
-
-  .image.avatar {
-    width: 100%;
-  }
-
-  .image.avatar img {
-    max-width: 180px;
   }
 }
 
@@ -773,7 +762,7 @@ section {
 }
 
 .page-content {
-  max-width: 900px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -1480,7 +1469,7 @@ body {
 
 .wrapper {
   background-color: #ffffff !important;
-  width: 860px;
+  width: 1200px;
   margin: 0 auto;
   border-right: 1px solid #e5e5e5;
   overflow: visible !important;
@@ -1491,11 +1480,11 @@ body {
 section {
   background-color: #ffffff !important;
   color: #000000 !important;
-  width: 650px;
+  width: 900px;
   float: right;
   padding-top: 4.0em;
   padding-bottom: 50px;
-  margin-left: 180px;
+  margin-left: 220px;
   position: relative;
   z-index: 0;
 }
@@ -1503,7 +1492,7 @@ section {
 header {
   background-color: #ffffff !important;
   color: #000000 !important;
-  width: 180px !important;
+  width: 200px !important;
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -2095,4 +2084,38 @@ body {
   border-bottom: none;
   margin-top: 1.5em;
   margin-bottom: 0.8em;
+}
+
+.main-figure {
+  max-width: 90%;
+  margin: 30px auto;
+}
+
+.authors-section {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.language-python {
+  max-width: 90%;
+  margin: 20px auto;
+  font-size: 0.95em;
+}
+
+/* Increase text size for better readability */
+.page-content p,
+.page-content li {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.page-content h2 {
+  font-size: 1.8em;
+  margin-top: 1.5em;
+}
+
+.page-content h3 {
+  font-size: 1.5em;
+  margin-top: 1.2em;
 } 

@@ -1479,4 +1479,54 @@ section p small a:hover {
   font-style: italic;
   margin-top: 8px;
   display: block;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .page-header {
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .page-content {
+    width: 100%;
+    padding: 15px 0;
+    overflow-x: hidden;
+  }
+
+  .cv-page .wrapper {
+    padding: 0 10px;
+  }
+
+  .cv-page .page-content {
+    padding: 0;
+  }
+
+  /* Ensure text doesn't overflow on mobile */
+  h1, h2, h3, h4, h5, h6, p, div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+}
+
+/* General CV page improvements */
+.cv-page .page-content {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.cv-page .wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
 } 

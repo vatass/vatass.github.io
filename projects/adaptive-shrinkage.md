@@ -261,15 +261,33 @@ For a new test subject with $h$ observations and $T_{\text{obs}}$ as the observa
   </div>
 
   <div class="results-figure">
-    <img src="/assets/img/projects/qualitative_trajectories1.png" alt="Qualitative Trajectory Analysis" class="results-image">
-    <em>Figure: Qualitative analysis of predicted brain aging trajectories. The plots show how our method (AS-DKGP) captures individual variations while maintaining consistency with population trends.</em>
+    <img src="/assets/img/projects/asedkgp_method_method_only.png" alt="Detailed Method Architecture" class="results-image">
+    <em>Figure: Detailed architecture of our Adaptive Shrinkage Deep Kernel Gaussian Process (AS-DKGP) method, showing the integration of population and subject-specific models.</em>
   </div>
 </div>
 
 ### Qualitative Results: Biomarker Trajectories
 
+<div class="results-section">
+  <div class="results-figure">
+    <img src="/assets/img/projects/qualitative_trajectories1.png" alt="Qualitative Trajectory Analysis" class="results-image">
+    <em>Figure: Qualitative analysis of predicted brain aging trajectories. The plots show how our method (AS-DKGP) captures individual variations while maintaining consistency with population trends.</em>
+  </div>
 
+  <div class="results-figure">
+    <img src="/assets/img/projects/conformal-bands.jpg" alt="Conformal Prediction Bands" class="results-image">
+    <em>Figure: Conformal prediction bands demonstrating the uncertainty quantification capabilities of our method across different subjects and time points.</em>
+  </div>
+</div>
 
+### Additional Validation
+
+<div class="results-section">
+  <div class="results-figure">
+    <img src="/assets/img/projects/adaptive-shrinkage.jpg" alt="Adaptive Shrinkage Analysis" class="results-image">
+    <em>Figure: Analysis of the adaptive shrinkage mechanism showing how the model balances between population and individual predictions based on available data.</em>
+  </div>
+</div>
 
 ## Why It Matters: Improved Forecasting and Clinical Relevance
 

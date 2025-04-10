@@ -102,34 +102,25 @@ As shown in the figure above, our method combines these components through Adapt
 
 ## How do we implement Adaptive Shrinkage Estimation
 
-
-## Quantitative Results: 
-
-
-## Qualitative Results
-
-
-## Explaining the Adaptive Shrinkage Function
-
 ### Predictive Posterior Correction
 
-Given predictions \\(y_p\\) and \\(y_s\\) from the p-DKGP and ss-DKGP models, the personalized prediction is expressed as a linear combination:
+Given predictions $y_p$ and $y_s$ from the p-DKGP and ss-DKGP models, the personalized prediction is expressed as a linear combination:
 
-\\[ y_c = \alpha y_p + (1 - \alpha) y_s \\]
+$$ y_c = \alpha y_p + (1 - \alpha) y_s $$
 
-where \\(\alpha\\) is the shrinkage parameter reflecting the relative confidence in each model. Assuming independence between the models, the combined prediction \\(y_c\\) retains Gaussian properties, and its variance is given by:
+where $\alpha$ is the shrinkage parameter reflecting the relative confidence in each model. Assuming independence between the models, the combined prediction $y_c$ retains Gaussian properties, and its variance is given by:
 
-\\[ v_c = \alpha^2 v_p + (1 - \alpha)^2 v_s \\]
+$$ v_c = \alpha^2 v_p + (1 - \alpha)^2 v_s $$
 
-The weights \\(\alpha\\) and \\(1 - \alpha\\) quantify the credibility of each model, yielding a new posterior predictive mean \\(Y_c\\) and variance \\(V_c\\). Values of \\(\alpha\\) close to 1 indicate higher confidence in p-DKGP model, while values close to 0 reflect greater trust in ss-DKGP model.
+The weights $\alpha$ and $1 - \alpha$ quantify the credibility of each model, yielding a new posterior predictive mean $Y_c$ and variance $V_c$. Values of $\alpha$ close to 1 indicate higher confidence in p-DKGP model, while values close to 0 reflect greater trust in ss-DKGP model.
 
-### Acquiring the Oracle Shrinkage \\(\alpha\\)
+### Acquiring the Oracle Shrinkage $\alpha$
 
-Estimating the oracle shrinkage parameter \\(\alpha\\) is crucial for constructing the personalized posterior predictive means and variances of the biomarker trajectory. To estimate \\(\alpha\\), we use a held-out set of subjects with known trajectories, unseen by the population model. Predictions for these subjects are generated using the p-DKGP model. For each subject, the ss-DKGP component is trained by progressively increasing the length of the observed trajectory.
+Estimating the oracle shrinkage parameter $\alpha$ is crucial for constructing the personalized posterior predictive means and variances of the biomarker trajectory. To estimate $\alpha$, we use a held-out set of subjects with known trajectories, unseen by the population model. Predictions for these subjects are generated using the p-DKGP model. For each subject, the ss-DKGP component is trained by progressively increasing the length of the observed trajectory.
 
-The entire biomarker trajectory is reconstructed from the baseline time (\\(t=0\\)) to the subject's last time point \\(t_n\\). Using both models, we obtain two estimates of the biomarker trajectory along with their predictive variances. Let \\(Y_p\\) and \\(V_p\\) denote the p-DKGP predictive mean and variance, and \\(Y_s\\) and \\(V_s\\) denote the ss-DKGP model predictive mean and variance. The oracle \\(\alpha\\) is estimated by minimizing:
+The entire biomarker trajectory is reconstructed from the baseline time $(t=0)$ to the subject's last time point $t_n$. Using both models, we obtain two estimates of the biomarker trajectory along with their predictive variances. Let $Y_p$ and $V_p$ denote the p-DKGP predictive mean and variance, and $Y_s$ and $V_s$ denote the ss-DKGP model predictive mean and variance. The oracle $\alpha$ is estimated by minimizing:
 
-\\[ J_{s|h}(\alpha) = \sum_{t=0}^{t_n} \left(y_t - \left(\alpha \cdot y_{p_{t}} + (1 - \alpha) \cdot y_{s_{t}}\right)\right)^2 \\]
+$$ J_{s|h}(\alpha) = \sum_{t=0}^{t_n} \left(y_t - \left(\alpha \cdot y_{p_{t}} + (1 - \alpha) \cdot y_{s_{t}}\right)\right)^2 $$
 
 #### Oracle Shrinkage Estimation Algorithm
 
@@ -150,17 +141,17 @@ for each s ∈ S:
     Store list L^(s) for subject s
 ```
 
-### Learning the Adaptive Shrinkage \\(\alpha\\)
+### Learning the Adaptive Shrinkage $\alpha$
 
-The shrinkage parameter \\(\alpha\\) represents the trust factor between the two components. We model \\(\alpha\\) as a function of the input variables \\( q = \{y_p, y_s, v_p, v_s, T_{\text{obs}}\} \\), where \\( q \in \mathbb{R}^5 \\) and \\( T_{\text{obs}} \\) represents the time of observation. Using oracle shrinkage \\(\alpha\\), our objective is to learn a mapping function \\( g_{a} \\) that transforms the input space to the output space of adaptive shrinkage:
+The shrinkage parameter $\alpha$ represents the trust factor between the two components. We model $\alpha$ as a function of the input variables $ q = \{y_p, y_s, v_p, v_s, T_{\text{obs}}\} \\), where $ q \in \mathbb{R}^5 \\) and $ T_{\text{obs}} \\) represents the time of observation. Using oracle shrinkage $\alpha$, our objective is to learn a mapping function $ g_{a} \\) that transforms the input space to the output space of adaptive shrinkage:
 
-\\[ \hat{\alpha} = g_{a}(q; \theta) \\]
+$$ \hat{\alpha} = g_{a}(q; \theta) $$
 
-We employ XGBoost regression to learn the function \\( g \\) that minimizes the difference between the predicted \\(\hat{\alpha} \\) and the oracle \\(\alpha\\).
+We employ XGBoost regression to learn the function $ g \\) that minimizes the difference between the predicted $\hat{\alpha} \\) and the oracle $\alpha$.
 
 ### Personalization through Adaptive Shrinkage Estimation
 
-For a new test subject with \\( h \\) observations and \\( T_{\text{obs}} \\) as the observation time, we implement the following algorithm:
+For a new test subject with $ h \\) observations and $ T_{\text{obs}} \\) as the observation time, we implement the following algorithm:
 
 ```python
 Algorithm: Personalization through Adaptive Shrinkage Estimation

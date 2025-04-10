@@ -6,59 +6,45 @@ body_class: projects-page
 ---
 
 <style>
-/* Center and widen the content */
+/* Page layout */
 .page-content {
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding: 0 40px !important;
-  width: 100% !important;
-}
-
-@media (max-width: 768px) {
-  .page-content {
-    padding: 0 20px !important;
-  }
-}
-
-/* Container for better content organization */
-.projects-container {
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
+/* Project grid layout */
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
   margin: 2rem 0;
 }
 
-.project-image {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  background: #f5f5f5;
-  position: relative;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px 8px 0 0;
-}
-
+/* Project card styling */
 .project-card {
-  margin-bottom: 2rem;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease-in-out;
+  margin-bottom: 2rem;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px 12px 0 0;
 }
 
 .project-content {
@@ -66,13 +52,19 @@ body_class: projects-page
 }
 
 .project-content h2 {
-  margin-top: 0;
+  margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.project-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .project-link {
   display: inline-block;
-  margin-top: 1rem;
   padding: 0.5rem 1rem;
   background: #000;
   color: #fff !important;
@@ -83,14 +75,29 @@ body_class: projects-page
 
 .project-link:hover {
   background: #333;
+  text-decoration: none;
+}
+
+/* Page title styling */
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.page-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 </style>
 
-<div class="projects-container">
+<h1 class="page-title">Research Projects</h1>
 
-# Research Projects
-
-Explore my research projects focused on machine learning and deep learning applications in healthcare, particularly in neuroimaging and Alzheimer's Disease research.
+<p class="page-description">
+  Explore my research projects focused on machine learning and deep learning applications in healthcare, particularly in neuroimaging and Alzheimer's Disease research.
+</p>
 
 <div class="project-grid">
   <div class="project-card">
@@ -105,6 +112,4 @@ Explore my research projects focused on machine learning and deep learning appli
   </div>
 
   <!-- Additional projects can be added here in the future -->
-</div>
-
 </div> 

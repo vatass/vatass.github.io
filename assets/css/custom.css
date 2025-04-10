@@ -307,10 +307,14 @@ ul:has(li:contains("Deep Kernel Learning")) li {
 /* Header and wrapper */
 header {
   width: 180px !important;
-  float: left !important;
-  position: fixed !important;
+  float: left;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding-top: 4.0em;
+  text-align: center;
   margin-left: -40px !important;
-  text-align: center !important;
+  height: auto !important;
+  overflow: visible !important;
 }
 
 header h1 {
@@ -361,7 +365,8 @@ header email {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    text-align: center !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 
   .wrapper {
@@ -369,9 +374,7 @@ header email {
     max-width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    overflow: visible !important;
   }
 
   .image.avatar {
@@ -397,8 +400,9 @@ header email {
   section {
     width: 100% !important;
     float: none !important;
-    margin: 0 !important;
     padding: 20px 15px !important;
+    margin: 0 !important;
+    overflow: visible !important;
   }
 
   /* Remove any potential interference */
@@ -514,8 +518,13 @@ header email {
 }
 
 .wrapper {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
+  width: 860px;
+  margin: 0 auto;
   border-right: 1px solid #e5e5e5;
+  overflow: visible !important;
+  min-height: 100vh;
+  position: relative;
 }
 
 /* Responsive improvements */
@@ -1434,6 +1443,9 @@ body {
   width: 860px;
   margin: 0 auto;
   border-right: 1px solid #e5e5e5;
+  overflow: visible !important;
+  min-height: 100vh;
+  position: relative;
 }
 
 section {
@@ -1444,6 +1456,7 @@ section {
   padding-top: 4.0em;
   padding-bottom: 50px;
   margin-left: 40px;
+  overflow: visible !important;
 }
 
 header {
@@ -1456,6 +1469,8 @@ header {
   padding-top: 4.0em;
   text-align: center;
   margin-left: -40px !important;
+  height: auto !important;
+  overflow: visible !important;
 }
 
 h1 {
@@ -2008,4 +2023,23 @@ section p small a:hover {
     margin: 2px !important;
     padding: 3px 8px !important;
   }
+}
+
+/* Ensure proper scrolling behavior */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto !important;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  margin-top: 0;
+  font-size: 16px;
+  min-height: 100vh;
+  position: relative;
 } 

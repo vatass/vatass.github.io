@@ -4,6 +4,40 @@ permalink: /projects/adaptive-shrinkage/
 ---
 
 <style>
+  /* Reset default page styles */
+  .page-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+    width: 100% !important;
+    background: transparent !important;
+  }
+
+  /* Remove any default margins/padding */
+  body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .page-content .wrapper {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  /* Container for better content organization */
+  .project-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+
   /* Center and widen the content */
   .page-content {
     max-width: 1200px !important;
@@ -16,12 +50,6 @@ permalink: /projects/adaptive-shrinkage/
     .page-content {
       padding: 0 20px !important;
     }
-  }
-
-  /* Container for better content organization */
-  .project-container {
-    max-width: 100%;
-    margin: 0 auto;
   }
 
   /* Title styling */

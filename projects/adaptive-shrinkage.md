@@ -53,6 +53,51 @@ permalink: /projects/adaptive-shrinkage/
     vertical-align: super;
     font-size: smaller;
   }
+
+  /* New styles for algorithm presentation */
+  .algorithm-block {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    font-family: 'Consolas', 'Monaco', monospace;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #2c3e50;
+  }
+
+  .algorithm-title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+  }
+
+  .algorithm-content {
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+
+  .algorithm-section {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+
+  .algorithm-comment {
+    color: #6a737d;
+    font-style: italic;
+  }
+
+  .algorithm-indent {
+    margin-left: 20px;
+  }
+
+  .math-block {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+    overflow-x: auto;
+  }
 </style>
 
 # Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories
@@ -124,22 +169,28 @@ $$ J_{s|h}(\alpha) = \sum_{t=0}^{t_n} \left(y_t - \left(\alpha \cdot y_{p_{t}} +
 
 #### Oracle Shrinkage Estimation Algorithm
 
-```python
-Algorithm: Oracle Shrinkage Estimation
-Input: Validation set V = {(U^s, Y^(s)) | s ∈ S}, where Y^(s) = {y_t^(s)}_{t=1}^T is the ground truth trajectory
-Output: Optimal shrinkage parameters α̂_{s,h} for each s ∈ S and h ∈ H
+<div class="algorithm-block">
+  <div class="algorithm-title">Algorithm 1: Oracle Shrinkage Estimation</div>
+  <div class="algorithm-content">
+<span class="algorithm-section">Input:</span>
+    Validation set V = {(U^s, Y^(s)) | s ∈ S}
+    where Y^(s) = {y_t^(s)}_{t=1}^T is the ground truth trajectory
+<span class="algorithm-section">Output:</span>
+    Optimal shrinkage parameters α̂_{s,h} for each s ∈ S and h ∈ H
 
+<span class="algorithm-section">Procedure:</span>
 for each s ∈ S:
     Initialize list L^(s) ← []
     for each h ∈ H:
-        Obtain P-DKGP trajectory: Y_p^(s,h) = {y_{p,t}^(s,h)}_{t=1}^T
-        Obtain ss-DKGP trajectory: Y_s^(s,h) = {y_{s,t}^(s,h)}_{t=1}^T
-        Define objective function:
-        J_{s,h}(α) = Σ_{t=0}^T (y_t^(s) - (α y_{p,t}^(s,h) + (1-α) y_{s,t}^(s,h)))^2
-        Compute: α̂_{s,h} = argmin_{α∈[0,1]} J_{s,h}(α)
-        Append α̂_{s,h} to L^(s)
+        <span class="algorithm-indent">1. Obtain P-DKGP trajectory: Y_p^(s,h) = {y_{p,t}^(s,h)}_{t=1}^T</span>
+        <span class="algorithm-indent">2. Obtain ss-DKGP trajectory: Y_s^(s,h) = {y_{s,t}^(s,h)}_{t=1}^T</span>
+        <span class="algorithm-indent">3. Define objective function:</span>
+        <span class="algorithm-indent">   J_{s,h}(α) = Σ_{t=0}^T (y_t^(s) - (α y_{p,t}^(s,h) + (1-α) y_{s,t}^(s,h)))^2</span>
+        <span class="algorithm-indent">4. Compute: α̂_{s,h} = argmin_{α∈[0,1]} J_{s,h}(α)</span>
+        <span class="algorithm-indent">5. Append α̂_{s,h} to L^(s)</span>
     Store list L^(s) for subject s
-```
+  </div>
+</div>
 
 ### Learning the Adaptive Shrinkage $\alpha$
 
@@ -153,18 +204,24 @@ We employ XGBoost regression to learn the function $g$ that minimizes the differ
 
 For a new test subject with $h$ observations and $T_{\text{obs}}$ as the observation time, we implement the following algorithm:
 
-```python
-Algorithm: Personalization through Adaptive Shrinkage Estimation
-Input: p-DKGP model, ss-DKGP model, and learned function g_α
-Output: Adapted predictive mean and variance: Y_c, V_c
+<div class="algorithm-block">
+  <div class="algorithm-title">Algorithm 2: Personalization through Adaptive Shrinkage Estimation</div>
+  <div class="algorithm-content">
+<span class="algorithm-section">Input:</span>
+    p-DKGP model
+    ss-DKGP model
+    learned function g_α
+<span class="algorithm-section">Output:</span>
+    Adapted predictive mean and variance: Y_c, V_c
 
+<span class="algorithm-section">Procedure:</span>
 1. Compute Y_p, V_p (predictive mean and variance) from p-DKGP model
 2. Compute Y_s, V_s (predictive mean and variance) from ss-DKGP model
 3. Adapted Shrinkage Estimation: α̂_h = g_α(Y_p, Y_s, V_p, V_s, T_obs)
 4. Compute personalized predictive mean: Y_c = α̂_h · Y_p + (1 - α̂_h) · Y_s
 5. Compute personalized predictive variance: V_c = α̂_h² · V_p + (1 - α̂_h)² · V_s
-6. Return Y_c, V_c
-```
+  </div>
+</div>
 
 ## Why It Matters: Improved Forecasting and Clinical Relevance
 

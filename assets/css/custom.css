@@ -512,42 +512,69 @@ header email {
   margin: 0 auto;
   position: relative;
   min-height: 100vh;
-  padding: 0 20px;
+  padding: 0;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
+  display: block;
+}
+
+/* Clearfix for proper layout */
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 header {
-  flex: 0 0 180px;
-  margin-right: 40px;
+  width: 170px !important;
+  float: left;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding-top: 4.0em;
+  text-align: center;
+  margin-left: -40px !important;
+  z-index: 1;
 }
 
 section {
-  flex: 1;
-  max-width: 650px;
+  width: 600px;
+  float: right;
   padding-top: 4.0em;
   padding-bottom: 50px;
+  margin-left: 220px;
   position: relative;
+  z-index: 0;
+  background-color: #ffffff;
 }
 
 @media (max-width: 768px) {
   .wrapper {
-    flex-direction: column;
-    padding: 0 15px;
+    width: 100% !important;
+    padding: 0 15px !important;
+    display: block !important;
   }
 
   header {
-    flex: none;
-    margin-right: 0;
     width: 100% !important;
+    float: none !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 20px 0 !important;
+    text-align: center !important;
   }
 
   section {
-    flex: none;
     width: 100% !important;
-    max-width: 100%;
-    padding: 20px 0 !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 20px 15px !important;
+  }
+
+  .image.avatar {
+    width: 100% !important;
+  }
+
+  .image.avatar img {
+    max-width: 150px !important;
   }
 }
 

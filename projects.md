@@ -6,9 +6,31 @@ body_class: projects-page
 ---
 
 <style>
-.project-grid {
-  max-width: 1200px;
+/* Center and widen the content */
+.page-content {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 0 20px !important;
+  }
+}
+
+/* Container for better content organization */
+.projects-container {
+  max-width: 100%;
   margin: 0 auto;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .project-image {
@@ -64,6 +86,8 @@ body_class: projects-page
 }
 </style>
 
+<div class="projects-container">
+
 # Research Projects
 
 Explore my research projects focused on machine learning and deep learning applications in healthcare, particularly in neuroimaging and Alzheimer's Disease research.
@@ -81,4 +105,6 @@ Explore my research projects focused on machine learning and deep learning appli
   </div>
 
   <!-- Additional projects can be added here in the future -->
+</div>
+
 </div> 

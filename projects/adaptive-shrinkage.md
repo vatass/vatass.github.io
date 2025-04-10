@@ -4,6 +4,26 @@ permalink: /projects/adaptive-shrinkage/
 ---
 
 <style>
+  /* Center and widen the content */
+  .page-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+    width: 100% !important;
+  }
+
+  @media (max-width: 768px) {
+    .page-content {
+      padding: 0 20px !important;
+    }
+  }
+
+  /* Container for better content organization */
+  .project-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
   /* Ensure all text in this page is dark black */
   h1, h2, h3, h4, h5, h6, p, li, a, span, strong, em, blockquote, code, ul, ol, dl, table, figcaption, small {
     color: #000000 !important;
@@ -151,6 +171,8 @@ permalink: /projects/adaptive-shrinkage/
   }
 </style>
 
+<div class="project-container">
+
 # Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories
 
 <div class="authors-section">
@@ -288,6 +310,8 @@ To encourage further research and collaboration, we have made our implementation
 ## Citation
 
 TBD.
+
+</div>
 
 
 

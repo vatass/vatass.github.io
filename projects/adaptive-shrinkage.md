@@ -101,7 +101,13 @@ We propose a novel framework that balances global population trends with individ
 
 As shown in the figure above, our method combines these components through adaptive shrinkage estimation to create personalized predictions that are more accurate than either component alone.
 
-## Results 
+## Quantitative Results: 
+
+
+## Qualitative Results
+
+
+## Explaining the Adaptive Shrinkage Function 
 
 
 

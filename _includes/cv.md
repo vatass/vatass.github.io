@@ -145,12 +145,16 @@
   margin-bottom: 30px;
   border-bottom: 1px solid #eee;
   padding-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .cv-section:last-child {
   border-bottom: none;
 }
 .cv-header {
   margin-bottom: 20px;
+  width: 100%;
 }
 .cv-header h3 {
   color: #000;
@@ -165,19 +169,25 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 .cv-item {
   margin-bottom: 10px;
+  width: 100%;
 }
 .cv-item-title {
   margin-bottom: 5px;
   font-size: 1.1em;
   color: #000;
+  word-wrap: break-word;
 }
 .cv-item-subtitle {
   margin-bottom: 3px;
   color: #000;
   font-weight: 500;
+  word-wrap: break-word;
 }
 .cv-item-date {
   font-size: 0.9em;
@@ -189,9 +199,42 @@
   color: #000;
   line-height: 1.4;
   font-weight: 400;
+  word-wrap: break-word;
 }
 .cv-item strong {
   font-weight: 700;
   color: #000;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .cv-section {
+    margin: 0;
+    padding: 15px;
+  }
+  
+  .cv-header h3 {
+    font-size: 1.3em;
+  }
+  
+  .cv-content {
+    padding: 0 5px;
+  }
+  
+  .cv-item-title {
+    font-size: 1em;
+  }
+  
+  .cv-item-subtitle {
+    font-size: 0.9em;
+  }
+  
+  .cv-item-date {
+    font-size: 0.85em;
+  }
+  
+  .cv-item-description {
+    font-size: 0.9em;
+  }
 }
 </style> 

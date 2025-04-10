@@ -249,7 +249,8 @@ For a new test subject with $h$ observations and $T_{\text{obs}}$ as the observa
 <div class="results-section">
   <div class="results-figure">
     <img src="/assets/img/projects/quantitativeresults.png" alt="Quantitative Results of Adaptive Shrinkage Estimation" class="results-image">
-    <em>Figure: Quantitative evaluation of our method showing performance metrics across different cohorts and prediction horizons. The results demonstrate superior performance of our adaptive shrinkage approach compared to baseline methods.</em>
+    <em>Figure: We compare the mean MAE per subject stratified by the progression status (top) and the AE with time from the last observation (bottom) of our method with the baselines for (a) the 7 ROI
+Volume biomarkers, (b) SPARE-AD score and (c) SPARE-BA. Error bars, in the top row, denote the 95th percentile of the MAE across all subjects. Our method is denoted as pers-DKGP</em>
   </div>
 </div>
 
@@ -258,7 +259,8 @@ For a new test subject with $h$ observations and $T_{\text{obs}}$ as the observa
 <div class="results-section">
   <div class="results-figure">
     <img src="/assets/img/projects/qualitative_trajectories1.png" alt="Qualitative Trajectory Analysis" class="results-image">
-    <em>Figure: Qualitative analysis of predicted brain aging trajectories. The plots show how our method (AS-DKGP) captures individual variations while maintaining consistency with population trends.</em>
+    <em>Figure: We present personalized ROI volume trajectories for three test subjects as observations increase from 4 to 7 acquisitions. The dashed lines represent the prediction using LMM. The first two panels visualize the Hippocampus R and Thalamus Proper R Volume trajectories of Healthy Control subject. Last panel shows the Lateral Ventricle R Volume for an AD Progressor. The shaded
+bands represent the predictive uncertainty over time.</em>
   </div>
 </div>
 
@@ -272,7 +274,6 @@ Our method significantly outperforms traditional models in predicting brain biom
 
 While our study focuses on neuroimaging data, our method has broad applications in:
 
-- **Personalized medicine**
 - **Disease progression modeling**
 - **Clinical trial optimization**
 
@@ -280,9 +281,13 @@ By integrating our approach into real-world healthcare settings, we can enhance 
 
 ## Open-Source and Future Directions
 
-To encourage further research and collaboration, we have made our implementation publicly available on [GitHub](https://github.com/vatass/AdaptiveShrinkageDKGP). Future work will explore extending this framework to model **multivariate biomarkers** and further refine **uncertainty estimation techniques** to improve clinical decision-making.
+To encourage further research and collaboration, we have made our implementation publicly available on [GitHub](https://github.com/vatass/AdaptiveShrinkageDKGP). 
 
 **To learn more, check out our full paper at ICLR 2025 and explore our code on [GitHub](https://github.com/vatass/AdaptiveShrinkageDKGP)!** 🚀
+
+## Citation
+
+TBD.
 
 
 

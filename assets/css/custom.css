@@ -357,6 +357,9 @@ header email {
     position: relative !important;
     margin-left: 0 !important;
     padding: 20px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   header h1 {
@@ -374,6 +377,25 @@ header email {
 
   .social-icons {
     margin-top: 0.5rem;
+  }
+
+  .image.avatar,
+  header .image.avatar {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .image.avatar img,
+  header .image.avatar img {
+    max-width: 150px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;
   }
 }
 

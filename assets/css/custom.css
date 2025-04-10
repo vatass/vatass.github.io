@@ -311,6 +311,9 @@ header {
   padding: 4.0em 0 0 0 !important;
   float: none !important;
   position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 
 @media (min-width: 769px) {
@@ -1391,12 +1394,12 @@ email {
 header .image.avatar,
 .wrapper .image.avatar,
 section .image.avatar {
-  margin: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
   padding: 0 !important;
-  border: none !important;
-  line-height: 0 !important;
-  font-size: 0 !important;
-  display: block !important;
 }
 
 #header .image.avatar {

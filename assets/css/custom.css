@@ -306,16 +306,13 @@ ul:has(li:contains("Deep Kernel Learning")) li {
 
 /* Header and wrapper */
 header {
-  width: 180px !important;
+  width: 160px !important;
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
   padding-top: 4.0em;
   text-align: center;
   margin-left: -40px !important;
-  height: auto !important;
-  overflow: visible !important;
-  z-index: 1;
 }
 
 header h1 {
@@ -368,9 +365,8 @@ header email {
 
   .wrapper {
     width: 100% !important;
-    padding: 0 15px !important;
-    margin: 0 auto !important;
-    overflow-x: hidden !important;
+    padding: 15px !important;
+    margin: 0 !important;
   }
 
   .image.avatar {
@@ -390,9 +386,8 @@ header email {
   section {
     width: 100% !important;
     float: none !important;
-    margin-left: 0 !important;
-    padding: 20px 15px !important;
-    clear: both !important;
+    margin: 0 !important;
+    padding: 20px 0 !important;
   }
 
   /* Remove any potential interference */
@@ -514,7 +509,6 @@ header email {
   min-height: 100vh;
   padding: 0;
   box-sizing: border-box;
-  display: block;
 }
 
 /* Clearfix for proper layout */
@@ -524,33 +518,20 @@ header email {
   clear: both;
 }
 
-header {
-  width: 170px !important;
-  float: left;
-  position: fixed;
-  -webkit-font-smoothing: subpixel-antialiased;
-  padding-top: 4.0em;
-  text-align: center;
-  margin-left: -40px !important;
-  z-index: 1;
-}
-
 section {
   width: 600px;
   float: right;
   padding-top: 4.0em;
   padding-bottom: 50px;
-  margin-left: 220px;
+  margin-left: 200px;
   position: relative;
-  z-index: 0;
-  background-color: #ffffff;
 }
 
 @media (max-width: 768px) {
   .wrapper {
     width: 100% !important;
-    padding: 0 15px !important;
-    display: block !important;
+    padding: 15px !important;
+    margin: 0 !important;
   }
 
   header {
@@ -566,7 +547,7 @@ section {
     width: 100% !important;
     float: none !important;
     margin: 0 !important;
-    padding: 20px 15px !important;
+    padding: 20px 0 !important;
   }
 
   .image.avatar {

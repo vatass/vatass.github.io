@@ -24,6 +24,17 @@ permalink: /projects/adaptive-shrinkage/
     margin: 0 auto;
   }
 
+  /* Title styling */
+  .project-title {
+    font-size: 2.2em;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* Ensure all text in this page is dark black */
   h1, h2, h3, h4, h5, h6, p, li, a, span, strong, em, blockquote, code, ul, ol, dl, table, figcaption, small {
     color: #000000 !important;
@@ -41,7 +52,7 @@ permalink: /projects/adaptive-shrinkage/
   .main-figure {
     display: block;
     margin: 30px auto;
-    max-width: 100%;
+    max-width: 85%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
   }
@@ -49,8 +60,10 @@ permalink: /projects/adaptive-shrinkage/
   /* Style for authors section */
   .authors-section {
     text-align: center;
-    margin: 20px 0 30px 0;
+    margin: 20px auto 30px auto;
     line-height: 1.6;
+    max-width: 800px;
+    padding: 0 20px;
   }
   
   .authors-names {
@@ -67,6 +80,7 @@ permalink: /projects/adaptive-shrinkage/
   .authors-emails {
     font-size: 0.9em;
     font-family: monospace;
+    word-wrap: break-word;
   }
   
   .superscript {
@@ -120,16 +134,17 @@ permalink: /projects/adaptive-shrinkage/
   }
 
   .results-section {
-    margin: 40px 0;
+    margin: 40px auto;
+    max-width: 800px;
   }
 
   .results-figure {
-    margin: 30px 0;
+    margin: 30px auto;
     text-align: center;
   }
 
   .results-image {
-    max-width: 100%;
+    max-width: 85%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -140,22 +155,24 @@ permalink: /projects/adaptive-shrinkage/
     margin-top: 15px;
     font-style: italic;
     color: #666;
-    max-width: 90%;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.9em;
   }
 
   .algorithm-figure {
-    margin: 30px 0;
+    margin: 30px auto;
     text-align: center;
     background: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 800px;
   }
 
   .algorithm-image {
-    max-width: 100%;
+    max-width: 85%;
     height: auto;
     border-radius: 4px;
   }
@@ -165,7 +182,7 @@ permalink: /projects/adaptive-shrinkage/
     margin-top: 15px;
     font-style: italic;
     color: #2c3e50;
-    max-width: 90%;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -173,7 +190,7 @@ permalink: /projects/adaptive-shrinkage/
 
 <div class="project-container">
 
-# Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories
+<h1 class="project-title">Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories</h1>
 
 <div class="authors-section">
   <div class="authors-names">

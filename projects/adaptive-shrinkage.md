@@ -93,12 +93,15 @@ Longitudinal neuroimaging studies track changes in brain structure, but the data
 
 ## Our Solution: Adaptive Shrinkage Estimation with Deep Kernel Learning
 
-We propose a novel framework that balances global population trends with individual-specific nuances. Our approach, **Deep Kernel Gaussian Processes with Adaptive Shrinkage Estimation **, integrates two components:
+We propose a novel framework that balances global population trends with individual-specific nuances. Our approach, **Deep Kernel Gaussian Processes with Adaptive Shrinkage Estimation**, integrates two components:
 
-- **Population Model (p-DKGP):** Trained on large datasets to learn general brain trajectory trends.
-- **Subject-Specific Model (ss-DKGP):** Personalized predictions based on an individual's limited available data.
+- **Population Model (p-DKGP):** Trained on large and longitudinally rich biomarker datasets to learn heterogeneous trajectory trends.
+- **Subject-Specific Model (ss-DKGP):** Personalized predictions based on an individual's follow-up data.
 
-As shown in the figure above, our method combines these components through adaptive shrinkage estimation to create personalized predictions that are more accurate than either component alone.
+As shown in the figure above, our method combines these components through Adaptive Shrinkage Estimation to create personalized predictions that are more accurate than either component alone.
+
+## How do we implement Adaptive Shrinkage Estimation
+
 
 ## Quantitative Results: 
 
@@ -106,9 +109,71 @@ As shown in the figure above, our method combines these components through adapt
 ## Qualitative Results
 
 
-## Explaining the Adaptive Shrinkage Function 
+## Explaining the Adaptive Shrinkage Function
 
+### Predictive Posterior Correction
 
+Given predictions \\(y_p\\) and \\(y_s\\) from the p-DKGP and ss-DKGP models, the personalized prediction is expressed as a linear combination:
+
+\\[ y_c = \alpha y_p + (1 - \alpha) y_s \\]
+
+where \\(\alpha\\) is the shrinkage parameter reflecting the relative confidence in each model. Assuming independence between the models, the combined prediction \\(y_c\\) retains Gaussian properties, and its variance is given by:
+
+\\[ v_c = \alpha^2 v_p + (1 - \alpha)^2 v_s \\]
+
+The weights \\(\alpha\\) and \\(1 - \alpha\\) quantify the credibility of each model, yielding a new posterior predictive mean \\(Y_c\\) and variance \\(V_c\\). Values of \\(\alpha\\) close to 1 indicate higher confidence in p-DKGP model, while values close to 0 reflect greater trust in ss-DKGP model.
+
+### Acquiring the Oracle Shrinkage \\(\alpha\\)
+
+Estimating the oracle shrinkage parameter \\(\alpha\\) is crucial for constructing the personalized posterior predictive means and variances of the biomarker trajectory. To estimate \\(\alpha\\), we use a held-out set of subjects with known trajectories, unseen by the population model. Predictions for these subjects are generated using the p-DKGP model. For each subject, the ss-DKGP component is trained by progressively increasing the length of the observed trajectory.
+
+The entire biomarker trajectory is reconstructed from the baseline time (\\(t=0\\)) to the subject's last time point \\(t_n\\). Using both models, we obtain two estimates of the biomarker trajectory along with their predictive variances. Let \\(Y_p\\) and \\(V_p\\) denote the p-DKGP predictive mean and variance, and \\(Y_s\\) and \\(V_s\\) denote the ss-DKGP model predictive mean and variance. The oracle \\(\alpha\\) is estimated by minimizing:
+
+\\[ J_{s|h}(\alpha) = \sum_{t=0}^{t_n} \left(y_t - \left(\alpha \cdot y_{p_{t}} + (1 - \alpha) \cdot y_{s_{t}}\right)\right)^2 \\]
+
+#### Oracle Shrinkage Estimation Algorithm
+
+```python
+Algorithm: Oracle Shrinkage Estimation
+Input: Validation set V = {(U^s, Y^(s)) | s ∈ S}, where Y^(s) = {y_t^(s)}_{t=1}^T is the ground truth trajectory
+Output: Optimal shrinkage parameters α̂_{s,h} for each s ∈ S and h ∈ H
+
+for each s ∈ S:
+    Initialize list L^(s) ← []
+    for each h ∈ H:
+        Obtain P-DKGP trajectory: Y_p^(s,h) = {y_{p,t}^(s,h)}_{t=1}^T
+        Obtain ss-DKGP trajectory: Y_s^(s,h) = {y_{s,t}^(s,h)}_{t=1}^T
+        Define objective function:
+        J_{s,h}(α) = Σ_{t=0}^T (y_t^(s) - (α y_{p,t}^(s,h) + (1-α) y_{s,t}^(s,h)))^2
+        Compute: α̂_{s,h} = argmin_{α∈[0,1]} J_{s,h}(α)
+        Append α̂_{s,h} to L^(s)
+    Store list L^(s) for subject s
+```
+
+### Learning the Adaptive Shrinkage \\(\alpha\\)
+
+The shrinkage parameter \\(\alpha\\) represents the trust factor between the two components. We model \\(\alpha\\) as a function of the input variables \\( q = \{y_p, y_s, v_p, v_s, T_{\text{obs}}\} \\), where \\( q \in \mathbb{R}^5 \\) and \\( T_{\text{obs}} \\) represents the time of observation. Using oracle shrinkage \\(\alpha\\), our objective is to learn a mapping function \\( g_{a} \\) that transforms the input space to the output space of adaptive shrinkage:
+
+\\[ \hat{\alpha} = g_{a}(q; \theta) \\]
+
+We employ XGBoost regression to learn the function \\( g \\) that minimizes the difference between the predicted \\(\hat{\alpha} \\) and the oracle \\(\alpha\\).
+
+### Personalization through Adaptive Shrinkage Estimation
+
+For a new test subject with \\( h \\) observations and \\( T_{\text{obs}} \\) as the observation time, we implement the following algorithm:
+
+```python
+Algorithm: Personalization through Adaptive Shrinkage Estimation
+Input: p-DKGP model, ss-DKGP model, and learned function g_α
+Output: Adapted predictive mean and variance: Y_c, V_c
+
+1. Compute Y_p, V_p (predictive mean and variance) from p-DKGP model
+2. Compute Y_s, V_s (predictive mean and variance) from ss-DKGP model
+3. Adapted Shrinkage Estimation: α̂_h = g_α(Y_p, Y_s, V_p, V_s, T_obs)
+4. Compute personalized predictive mean: Y_c = α̂_h · Y_p + (1 - α̂_h) · Y_s
+5. Compute personalized predictive variance: V_c = α̂_h² · V_p + (1 - α̂_h)² · V_s
+6. Return Y_c, V_c
+```
 
 ## Why It Matters: Improved Forecasting and Clinical Relevance
 

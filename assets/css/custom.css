@@ -77,6 +77,7 @@ section .avatar {
   width: 100% !important;
   margin: 0 auto !important;
   padding: 0 !important;
+  text-align: center !important;
 }
 
 .image.avatar img,
@@ -355,8 +356,41 @@ header email {
     width: 100% !important;
     float: none !important;
     position: relative !important;
-    margin-left: 0 !important;
-    padding: 20px 0 0 0 !important;
+    margin: 0 auto !important;
+    padding: 20px 15px 0 15px !important;
+    text-align: center !important;
+  }
+
+  .image.avatar {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .image.avatar img {
+    max-width: 180px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;
+  }
+
+  section {
+    width: 100% !important;
+    float: none !important;
+    padding-top: 0.5rem !important;
+    margin: 0 auto !important;
+  }
+
+  .wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -383,31 +417,75 @@ header email {
     margin-top: 0.3rem;
   }
 
-  .image.avatar,
+  .top-navigation {
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .top-navigation .nav-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .top-navigation .nav-menu li {
+    margin: 3px;
+  }
+  
+  .top-navigation .nav-menu a {
+    font-size: 1rem !important;
+    padding: 5px;
+  }
+  
+  p, a, li, span {
+    font-size: 15px !important;
+  }
+  
+  h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  h2 {
+    font-size: 1.6rem !important;
+  }
+  
+  h3 {
+    font-size: 1.4rem !important;
+  }
+  
+  .project-title h3 {
+    font-size: 1.4rem !important;
+  }
+  
+  .cv-header h3 {
+    font-size: 1.4rem !important;
+  }
+  
+  .cv-item-title {
+    font-size: 1.1rem !important;
+  }
+  
+  .cv-item-subtitle {
+    font-size: 1rem !important;
+  }
+}
+
+/* Override any other styles that might affect centering */
+@media (max-width: 768px) {
   header .image.avatar {
+    margin: 0 auto !important;
+    width: 100% !important;
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
   }
 
-  .image.avatar img,
   header .image.avatar img {
-    max-width: 150px !important;
     margin: 0 auto !important;
-    display: block !important;
     position: relative !important;
     left: 0 !important;
-  }
-
-  section {
-    padding-top: 1rem !important;
-  }
-
-  section h2:first-of-type {
-    margin-top: 1rem !important;
+    transform: none !important;
   }
 }
 
@@ -1803,5 +1881,59 @@ section p small a:hover {
   /* Reduce spacing after the header */
   header + section {
     padding-top: 0 !important;
+  }
+}
+
+/* Image centering styles */
+.image.avatar {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.image.avatar img {
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 180px !important;
+  height: auto !important;
+  position: relative !important;
+  left: 0 !important;
+  transform: none !important;
+}
+
+/* Mobile-specific image centering */
+@media (max-width: 768px) {
+  .image.avatar {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .image.avatar img {
+    max-width: 180px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 20px 0 !important;
+    float: none !important;
+    position: relative !important;
   }
 } 

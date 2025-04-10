@@ -23,7 +23,7 @@ I am a Ph.D. Candidate in Bioengineering at the University of Pennsylvania, advi
 
 <div class="availability">
   <h4>Current Availability</h4>
-  <p>I am currently seeking internships for <strong>Summer 2025</strong> and full-time opportunities starting in late <strong>Fall 2025</strong>. I'm particularly interested in roles that leverage my expertise in machine learning, statistical modeling in applications to health or finance.</p>
+  <p>I am currently seeking full-time opportunities starting in late <strong>Fall 2025</strong>. I'm particularly interested in roles that leverage my expertise in machine learning, statistical modeling in applications to health or finance.</p>
 </div>
 
 {% include_relative _includes/contact.md %}

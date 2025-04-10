@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Research Projects
+title: ""
 permalink: /projects/
+body_class: projects-page
 ---
 
 # Research Projects

@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Adaptive Shrinkage Estimation
 ---
 
 <style>

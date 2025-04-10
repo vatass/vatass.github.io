@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Curriculum Vitae
+title: ""
 permalink: /cv/
 body_class: cv-page
 ---

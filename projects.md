@@ -12,7 +12,7 @@ Explore my research projects focused on machine learning and deep learning appli
 <div class="project-grid">
   <div class="project-card">
     <div class="project-image">
-      <img src="/assets/img/projects/asedkgp_method.png" alt="Adaptive Shrinkage Estimation Method">
+      <img src="/assets/img/projects/asedkgp_method_method_only.png" alt="Adaptive Shrinkage Estimation Method">
     </div>
     <div class="project-content">
       <h2>Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression</h2>

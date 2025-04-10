@@ -112,7 +112,6 @@ h2 {
   margin-top: 2em;
   margin-bottom: 1em;
   color: #000000;
-  border-bottom: 1px solid #333;
   padding-bottom: 0.3em;
   font-size: 1.8rem;
 }
@@ -1522,8 +1521,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem !important;
-  color: #000000 !important;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: #000000;
+  padding-bottom: 0.3em;
+  font-size: 1.8rem;
 }
 
 h3 {
@@ -2086,4 +2088,11 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+}
+
+/* Project-specific h2 styling */
+.page-content h2 {
+  border-bottom: none;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
 } 

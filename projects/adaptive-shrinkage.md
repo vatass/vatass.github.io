@@ -143,15 +143,15 @@ for each s ∈ S:
 
 ### Learning the Adaptive Shrinkage $\alpha$
 
-The shrinkage parameter $\alpha$ represents the trust factor between the two components. We model $\alpha$ as a function of the input variables $ q = \{y_p, y_s, v_p, v_s, T_{\text{obs}}\} \\), where $ q \in \mathbb{R}^5 \\) and $ T_{\text{obs}} \\) represents the time of observation. Using oracle shrinkage $\alpha$, our objective is to learn a mapping function $ g_{a} \\) that transforms the input space to the output space of adaptive shrinkage:
+The shrinkage parameter $\alpha$ represents the trust factor between the two components. We model $\alpha$ as a function of the input variables $q = \{y_p, y_s, v_p, v_s, T_{\text{obs}}\}$, where $q \in \mathbb{R}^5$ and $T_{\text{obs}}$ represents the time of observation. Using oracle shrinkage $\alpha$, our objective is to learn a mapping function $g_{a}$ that transforms the input space to the output space of adaptive shrinkage:
 
 $$ \hat{\alpha} = g_{a}(q; \theta) $$
 
-We employ XGBoost regression to learn the function $ g \\) that minimizes the difference between the predicted $\hat{\alpha} \\) and the oracle $\alpha$.
+We employ XGBoost regression to learn the function $g$ that minimizes the difference between the predicted $\hat{\alpha}$ and the oracle $\alpha$.
 
 ### Personalization through Adaptive Shrinkage Estimation
 
-For a new test subject with $ h \\) observations and $ T_{\text{obs}} \\) as the observation time, we implement the following algorithm:
+For a new test subject with $h$ observations and $T_{\text{obs}}$ as the observation time, we implement the following algorithm:
 
 ```python
 Algorithm: Personalization through Adaptive Shrinkage Estimation

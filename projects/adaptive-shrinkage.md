@@ -98,6 +98,32 @@ permalink: /projects/adaptive-shrinkage/
     margin: 10px 0;
     overflow-x: auto;
   }
+
+  .results-section {
+    margin: 40px 0;
+  }
+
+  .results-figure {
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  .results-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .results-figure em {
+    display: block;
+    margin-top: 15px;
+    font-style: italic;
+    color: #666;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
 
 # Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories
@@ -147,7 +173,7 @@ As shown in the figure above, our method combines these components through Adapt
 
 ## How do we implement Adaptive Shrinkage Estimation
 
-### Predictive Posterior Correction
+### 1. Predictive Posterior Correction
 
 Given predictions $y_p$ and $y_s$ from the p-DKGP and ss-DKGP models, the personalized prediction is expressed as a linear combination:
 
@@ -159,7 +185,7 @@ $$ v_c = \alpha^2 v_p + (1 - \alpha)^2 v_s $$
 
 The weights $\alpha$ and $1 - \alpha$ quantify the credibility of each model, yielding a new posterior predictive mean $Y_c$ and variance $V_c$. Values of $\alpha$ close to 1 indicate higher confidence in p-DKGP model, while values close to 0 reflect greater trust in ss-DKGP model.
 
-### Acquiring the Oracle Shrinkage $\alpha$
+### 2. Acquiring the Oracle Shrinkage $\alpha$
 
 Estimating the oracle shrinkage parameter $\alpha$ is crucial for constructing the personalized posterior predictive means and variances of the biomarker trajectory. To estimate $\alpha$, we use a held-out set of subjects with known trajectories, unseen by the population model. Predictions for these subjects are generated using the p-DKGP model. For each subject, the ss-DKGP component is trained by progressively increasing the length of the observed trajectory.
 
@@ -167,7 +193,7 @@ The entire biomarker trajectory is reconstructed from the baseline time $(t=0)$ 
 
 $$ J_{s|h}(\alpha) = \sum_{t=0}^{t_n} \left(y_t - \left(\alpha \cdot y_{p_{t}} + (1 - \alpha) \cdot y_{s_{t}}\right)\right)^2 $$
 
-#### Oracle Shrinkage Estimation Algorithm
+#### 3.Oracle Shrinkage Estimation Algorithm
 
 <div class="algorithm-block">
   <div class="algorithm-title">Algorithm 1: Oracle Shrinkage Estimation</div>
@@ -192,7 +218,7 @@ for each s ∈ S:
   </div>
 </div>
 
-### Learning the Adaptive Shrinkage $\alpha$
+### 4. Learning the Adaptive Shrinkage $\alpha$
 
 The shrinkage parameter $\alpha$ represents the trust factor between the two components. We model $\alpha$ as a function of the input variables $q = \{y_p, y_s, v_p, v_s, T_{\text{obs}}\}$, where $q \in \mathbb{R}^5$ and $T_{\text{obs}}$ represents the time of observation. Using oracle shrinkage $\alpha$, our objective is to learn a mapping function $g_{a}$ that transforms the input space to the output space of adaptive shrinkage:
 
@@ -200,7 +226,7 @@ $$ \hat{\alpha} = g_{a}(q; \theta) $$
 
 We employ XGBoost regression to learn the function $g$ that minimizes the difference between the predicted $\hat{\alpha}$ and the oracle $\alpha$.
 
-### Personalization through Adaptive Shrinkage Estimation
+### 5. Personalization through Adaptive Shrinkage Estimation
 
 For a new test subject with $h$ observations and $T_{\text{obs}}$ as the observation time, we implement the following algorithm:
 
@@ -223,6 +249,28 @@ For a new test subject with $h$ observations and $T_{\text{obs}}$ as the observa
   </div>
 </div>
 
+
+## Results 
+
+### Quantitative Results 
+
+<div class="results-section">
+  <div class="results-figure">
+    <img src="/assets/img/projects/quantitativeresults.png" alt="Quantitative Results of Adaptive Shrinkage Estimation" class="results-image">
+    <em>Figure: Quantitative evaluation of our method showing performance metrics across different cohorts and prediction horizons. The results demonstrate superior performance of our adaptive shrinkage approach compared to baseline methods.</em>
+  </div>
+
+  <div class="results-figure">
+    <img src="/assets/img/projects/qualitative_trajectories1.png" alt="Qualitative Trajectory Analysis" class="results-image">
+    <em>Figure: Qualitative analysis of predicted brain aging trajectories. The plots show how our method (AS-DKGP) captures individual variations while maintaining consistency with population trends.</em>
+  </div>
+</div>
+
+### Qualitative Results: Biomarker Trajectories
+
+
+
+
 ## Why It Matters: Improved Forecasting and Clinical Relevance
 
 Our method significantly outperforms traditional models in predicting brain biomarker trajectories. We tested it on multiple neuroimaging studies, including **Alzheimer's Disease Neuroimaging Initiative (ADNI)** and **Baltimore Longitudinal Study of Aging (BLSA)**, as well as independent external datasets. Results showed:
@@ -243,9 +291,7 @@ By integrating our approach into real-world healthcare settings, we can enhance 
 
 To encourage further research and collaboration, we have made our implementation publicly available on [GitHub](https://github.com/vatass/AdaptiveShrinkageDKGP). Future work will explore extending this framework to model **multivariate biomarkers** and further refine **uncertainty estimation techniques** to improve clinical decision-making.
 
-## Conclusion
-
-Our work represents a significant step forward in personalized modeling of brain health. By combining deep learning with adaptive statistical techniques, we bridge the gap between large-scale population insights and individual-specific predictions. As personalized medicine continues to advance, such methodologies will play a pivotal role in shaping the future of neuroscience and healthcare.
-
 **To learn more, check out our full paper at ICLR 2025 and explore our code on [GitHub](https://github.com/vatass/AdaptiveShrinkageDKGP)!** 🚀
+
+
 

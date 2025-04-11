@@ -30,7 +30,7 @@
 .top-navigation .nav-menu a {
   color: #000000;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 16px;
   padding: 8px 0;
   transition: all 0.2s ease;
   position: relative;
@@ -54,6 +54,13 @@
 
 .top-navigation .nav-menu a:hover::after {
   width: 100%;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .top-navigation .nav-menu a {
+    font-size: 16px;
+  }
 }
 
 /* Dark theme as default */

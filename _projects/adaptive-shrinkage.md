@@ -7,6 +7,8 @@ title: ""
   /* Page layout */
   .page-content {
     padding: 0 !important;
+    margin: 0 auto !important;
+    max-width: 900px !important;
   }
 
   .wrapper {
@@ -16,9 +18,9 @@ title: ""
 
   /* Main container */
   .project-container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 40px 20px;
     background: #fff;
   }
 
@@ -118,7 +120,15 @@ title: ""
 
   @media (max-width: 768px) {
     .project-container {
-      padding: 20px;
+      padding: 20px 15px;
+    }
+    
+    .project-container img {
+      max-width: 95%;
+    }
+    
+    .project-container em {
+      max-width: 95%;
     }
   }
 
@@ -271,6 +281,23 @@ title: ""
   a:hover {
     text-decoration: underline;
   }
+
+  /* Center all images and their captions */
+  .project-container img {
+    display: block;
+    margin: 30px auto;
+    max-width: 85%;
+    height: auto;
+  }
+
+  .project-container em {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 85%;
+    color: #666;
+    font-size: 0.95em;
+  }
 </style>
 
 <div class="project-container">
@@ -396,6 +423,10 @@ bands represent the predictive uncertainty over time.</em>
     </div>
   </div>
 
+  <h2> Explaining the Adaptive Shrinkage</h2>
+
+
+
   <h2>Why It Matters: Improved Forecasting and Clinical Relevance</h2>
 
   Our method significantly outperforms traditional models in predicting brain biomarker trajectories. We tested it on multiple neuroimaging studies, including **Alzheimer's Disease Neuroimaging Initiative (ADNI)** and **Baltimore Longitudinal Study of Aging (BLSA)**, as well as independent external datasets. Results showed:
@@ -410,12 +441,6 @@ bands represent the predictive uncertainty over time.</em>
   - **Clinical trial optimization**
 
   By integrating our approach into real-world healthcare settings, we can enhance early diagnosis, track disease progression more effectively, and tailor treatments to individual patients.
-
-  <h2>Open-Source and Future Directions</h2>
-
-  To encourage further research and collaboration, we have made our implementation publicly available on [GitHub](https://github.com/vatass/AdaptiveShrinkageDKGP). 
-
-  **To learn more, check out our full paper at ICLR 2025 and explore our code on [GitHub](https://github.com/vatass/AdaptiveShrinkageDKGP)!** 🚀
 
   <h2>Citation</h2>
 

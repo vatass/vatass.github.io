@@ -274,8 +274,6 @@ layout: page
 
 <div class="project-container">
   <div class="project-header">
-    <h1 class="project-title">Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories</h1>
-    
     <div class="authors-section">
       <div class="authors-names">
         <span class="author-name">Vasiliki Tassopoulou<span class="author-superscript">1,2</span></span>, 

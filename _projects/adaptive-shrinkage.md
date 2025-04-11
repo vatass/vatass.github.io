@@ -335,6 +335,9 @@ title: ""
         <a href="https://iclr.cc/media/iclr-2025/Slides/28284.pdf" target="_blank">
           <img src="https://img.shields.io/badge/Slides-PDF-red.svg" alt="Slides">
         </a>
+        <a href="https://iclr.cc/media/PosterPDFs/ICLR%202025/28284.png?t=1744255974.325819" target="_blank">
+          <img src="https://img.shields.io/badge/Poster-PNG-green.svg" alt="Poster">
+        </a>
       </div>
     </div>
   </div>

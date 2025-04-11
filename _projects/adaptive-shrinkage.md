@@ -250,6 +250,13 @@ layout: page
     margin-bottom: 1em;
   }
 
+  h2 {
+    font-size: 1.8em;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 0.3em;
+    margin-top: 2.5em;
+  }
+
   p {
     margin-bottom: 1.2em;
     line-height: 1.6;

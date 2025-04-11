@@ -315,14 +315,14 @@ layout: page
     <em>Figure: Our framework combines a population-level deep kernel Gaussian process (p-DKGP) and a subject-specific model (ss-DKGP), integrating them through Adaptive Shrinkage Estimation to personalize brain biomarker trajectory predictions.</em>
   </div>
 
-  ## Abstract
+  <h2>Abstract</h2>
 
   Understanding how brain biomarkers change over time is crucial for diagnosing and tracking neurological diseases like Alzheimer's. However, predicting these biomarker trajectories is challenging due to biological variability, inconsistent imaging protocols, and sparse, irregular data collection. Our recent work, presented at **ICLR 2025**, introduces a new approach that tackles the afforementioned challenges: **Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression**. This method provides a more accurate and personalized way to model brain changes over time.
 
-  ## The Challenge: Predicting Brain Biomarkers Accurately
+  <h2>The Challenge: Predicting Brain Biomarkers Accurately</h2>
   Longitudinal neuroimaging studies track changes in brain structure, but the data is often incomplete or misaligned across individuals. Traditional statistical models, such as linear mixed-effects models and generalized additive models, struggle to capture complex, non-linear brain trajectory patterns. On the other hand, deep learning models can learn from vast amounts of data but may not adapt well to individual patient variations.
 
-  ## Our Solution: Adaptive Shrinkage Estimation with Deep Kernel Learning
+  <h2>Our Solution: Adaptive Shrinkage Estimation with Deep Kernel Learning</h2>
 
   We propose a novel framework that balances global population trends with individual-specific nuances. Our approach, **Deep Kernel Gaussian Processes with Adaptive Shrinkage Estimation**, integrates two components:
 
@@ -331,9 +331,7 @@ layout: page
 
   As shown in the figure above, our method combines these components through Adaptive Shrinkage Estimation to create personalized predictions that are more accurate than either component alone.
 
-  ## How do we implement Adaptive Shrinkage Estimation
-
-  ### 1. Predictive Posterior Correction
+  <h3>1. Predictive Posterior Correction</h3>
 
   Given predictions $y_p$ and $y_s$ from the p-DKGP and ss-DKGP models, the personalized prediction is expressed as a linear combination:
 
@@ -345,7 +343,7 @@ layout: page
 
   The weights $\alpha$ and $1 - \alpha$ quantify the credibility of each model, yielding a new posterior predictive mean $Y_c$ and variance $V_c$. Values of $\alpha$ close to 1 indicate higher confidence in p-DKGP model, while values close to 0 reflect greater trust in ss-DKGP model.
 
-  ### 2. Acquiring the Oracle Shrinkage $\alpha$
+  <h3>2. Acquiring the Oracle Shrinkage $\alpha$</h3>
 
   Estimating the oracle shrinkage parameter $\alpha$ is crucial for constructing the personalized posterior predictive means and variances of the biomarker trajectory. To estimate $\alpha$, we use a held-out set of subjects with known trajectories, unseen by the population model. Predictions for these subjects are generated using the p-DKGP model. For each subject, the ss-DKGP component is trained by progressively increasing the length of the observed trajectory.
 
@@ -353,14 +351,14 @@ layout: page
 
   $$ J_{s|h}(\alpha) = \sum_{t=0}^{t_n} \left(y_t - \left(\alpha \cdot y_{p_{t}} + (1 - \alpha) \cdot y_{s_{t}}\right)\right)^2 $$
 
-  #### 3. Oracle Shrinkage Estimation Algorithm
+  <h3>3. Oracle Shrinkage Estimation Algorithm</h3>
 
   <div class="algorithm-figure">
     <img src="/assets/img/projects/oracleshrinkageestimation.png" alt="Oracle Shrinkage Estimation Algorithm" class="algorithm-image">
     <em>Algorithm 1: Oracle Shrinkage Estimation procedure showing the steps to compute optimal shrinkage parameters.</em>
   </div>
 
-  ### 4. Learning the Adaptive Shrinkage $\alpha$
+  <h3>4. Learning the Adaptive Shrinkage $\alpha$</h3>
 
   The shrinkage parameter $\alpha$ represents the trust factor between the two components. We model $\alpha$ as a function of the input variables $q = \{y_p, y_s, v_p, v_s, T_{\text{obs}}\}$, where $q \in \mathbb{R}^5$ and $T_{\text{obs}}$ represents the time of observation. Using oracle shrinkage $\alpha$, our objective is to learn a mapping function $g_{a}$ that transforms the input space to the output space of adaptive shrinkage:
 
@@ -368,7 +366,7 @@ layout: page
 
   We employ XGBoost regression to learn the function $g$ that minimizes the difference between the predicted $\hat{\alpha}$ and the oracle $\alpha$.
 
-  ### 5. Personalization through Adaptive Shrinkage Estimation
+  <h3>5. Personalization through Adaptive Shrinkage Estimation</h3>
 
   For a new test subject with $h$ observations and $T_{\text{obs}}$ as the observation time, we implement the following algorithm:
 
@@ -377,9 +375,9 @@ layout: page
     <em>Algorithm 2: Personalization through Adaptive Shrinkage Estimation showing the steps to compute personalized predictions.</em>
   </div>
 
-  ## Results 
+  <h2>Results</h2>
 
-  ### Quantitative Results 
+  <h3>Quantitative Results</h3>
 
   <div class="results-section">
     <div class="results-figure">
@@ -389,7 +387,7 @@ Volume biomarkers, (b) SPARE-AD score and (c) SPARE-BA. Error bars, in the top r
     </div>
   </div>
 
-  ### Qualitative Results: Biomarker Trajectories
+  <h3>Qualitative Results: Biomarker Trajectories</h3>
 
   <div class="results-section">
     <div class="results-figure">
@@ -399,7 +397,7 @@ bands represent the predictive uncertainty over time.</em>
     </div>
   </div>
 
-  ## Why It Matters: Improved Forecasting and Clinical Relevance
+  <h2>Why It Matters: Improved Forecasting and Clinical Relevance</h2>
 
   Our method significantly outperforms traditional models in predicting brain biomarker trajectories. We tested it on multiple neuroimaging studies, including **Alzheimer's Disease Neuroimaging Initiative (ADNI)** and **Baltimore Longitudinal Study of Aging (BLSA)**, as well as independent external datasets. Results showed:
 
@@ -414,13 +412,13 @@ bands represent the predictive uncertainty over time.</em>
 
   By integrating our approach into real-world healthcare settings, we can enhance early diagnosis, track disease progression more effectively, and tailor treatments to individual patients.
 
-  ## Open-Source and Future Directions
+  <h2>Open-Source and Future Directions</h2>
 
   To encourage further research and collaboration, we have made our implementation publicly available on [GitHub](https://github.com/vatass/AdaptiveShrinkageDKGP). 
 
   **To learn more, check out our full paper at ICLR 2025 and explore our code on [GitHub](https://github.com/vatass/AdaptiveShrinkageDKGP)!** 🚀
 
-  ## Citation
+  <h2>Citation</h2>
 
   TBD.
 </div>

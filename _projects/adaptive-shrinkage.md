@@ -332,6 +332,9 @@ title: ""
         <a href="https://github.com/vatass/AdaptiveShrinkageDKGP" target="_blank">
           <img src="https://img.shields.io/badge/Code-GitHub-black.svg" alt="GitHub">
         </a>
+        <a href="https://iclr.cc/media/iclr-2025/Slides/28284.pdf" target="_blank">
+          <img src="https://img.shields.io/badge/Slides-PDF-red.svg" alt="Slides">
+        </a>
       </div>
     </div>
   </div>

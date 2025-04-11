@@ -27,17 +27,19 @@
   padding: 0 20px;
 }
 
-.top-navigation .nav-menu a {
+/* Navigation links - consistent font size across all pages */
+.top-navigation .nav-menu a,
+.nav-menu a,
+.page-content .nav-menu a,
+.cv-page .nav-menu a,
+.projects-page .nav-menu a {
   color: #000000;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 16px !important;
   padding: 8px 0;
   transition: all 0.2s ease;
   position: relative;
-}
-
-.top-navigation .nav-menu a:hover {
-  color: #cccccc;
+  text-decoration: none;
 }
 
 /* Προσθέτουμε ένα νέο εφέ για το hover */
@@ -58,8 +60,12 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .top-navigation .nav-menu a {
-    font-size: 16px;
+  .top-navigation .nav-menu a,
+  .nav-menu a,
+  .page-content .nav-menu a,
+  .cv-page .nav-menu a,
+  .projects-page .nav-menu a {
+    font-size: 16px !important;
   }
 }
 

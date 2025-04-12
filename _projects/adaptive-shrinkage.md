@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ""
+title: "Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories"
 ---
 
 <style>
@@ -24,24 +24,39 @@ title: ""
     background: #fff;
   }
 
-  /* Title section */
-  .project-header {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 3rem auto;
-  }
-
+  /* Project title */
   .project-title {
     font-size: 2.2em;
     line-height: 1.4;
-    margin-bottom: 2rem;
+    margin: 2rem auto;
     color: #2c3e50;
+    text-align: center;
+    max-width: 90%;
+    font-weight: bold;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1;
+  }
+
+  /* Project header */
+  .project-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+  }
+
+  .title-section {
+    margin-bottom: 2rem;
+    display: block !important;
   }
 
   /* Authors section */
   .authors-section {
     text-align: center;
-    margin: 0 auto 2rem auto;
+    margin: 2rem auto;
     max-width: 800px;
   }
 
@@ -130,17 +145,6 @@ title: ""
     .project-container em {
       max-width: 95%;
     }
-  }
-
-  /* Title styling */
-  .project-title {
-    font-size: 2.2em;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   /* Authors section styling */
@@ -302,43 +306,39 @@ title: ""
 
 <div class="project-container">
   <div class="project-header">
-    <div class="authors-section">
-      <div class="authors-names">
-        <span class="author-name">Vasiliki Tassopoulou<span class="author-superscript">1,2</span></span>, 
-        <span class="author-name">Haochang Shou<span class="author-superscript">1,3</span></span> and 
-        <span class="author-name">Christos Davatzikos<span class="author-superscript">1,2</span></span>
-      </div>
+    <h1 class="project-title">Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories</h1>
+  </div>
 
-      <div class="affiliations">
-        <div class="affiliation-item">
-          <span class="affiliation-number">1</span>Center for AI and Data Science for Integrated Diagnostics, University of Pennsylvania
-        </div>
-        <div class="affiliation-item">
-          <span class="affiliation-number">2</span>Department of Bioengineering, University of Pennsylvania
-        </div>
-        <div class="affiliation-item">
-          <span class="affiliation-number">3</span>Department of Biostatistics, Epidemiology and Informatics, University of Pennsylvania
-        </div>
-      </div>
+  <div class="authors-section">
+    <div class="authors-names">
+      <span class="author-name">Vasiliki Tassopoulou<span class="author-superscript">1,2</span></span>,
+      <span class="author-name">Haochang Shou<span class="author-superscript">1,3</span></span> and
+      <span class="author-name">Christos Davatzikos<span class="author-superscript">1,2</span></span>
+    </div>
 
-      <div class="authors-email">
-        {vasiliki.tassopoulou, hshou, christos.davatzikos}@pennmedicine.upenn.edu
-      </div>
+    <div class="affiliations">
+      <div class="affiliation-item"><span class="affiliation-number">1</span>Center for AI and Data Science for Integrated Diagnostics, University of Pennsylvania</div>
+      <div class="affiliation-item"><span class="affiliation-number">2</span>Department of Bioengineering, University of Pennsylvania</div>
+      <div class="affiliation-item"><span class="affiliation-number">3</span>Department of Biostatistics, Epidemiology and Informatics, University of Pennsylvania</div>
+    </div>
 
-      <div class="paper-links">
-        <a href="https://openreview.net/forum?id=peX9zpWgg4" target="_blank">
-          <img src="https://img.shields.io/badge/Paper-OpenReview-blue.svg" alt="Paper">
-        </a>
-        <a href="https://github.com/vatass/AdaptiveShrinkageDKGP" target="_blank">
-          <img src="https://img.shields.io/badge/Code-GitHub-black.svg" alt="GitHub">
-        </a>
-        <a href="https://iclr.cc/media/iclr-2025/Slides/28284.pdf" target="_blank">
-          <img src="https://img.shields.io/badge/Slides-PDF-red.svg" alt="Slides">
-        </a>
-        <a href="https://iclr.cc/media/PosterPDFs/ICLR%202025/28284.png?t=1744255974.325819" target="_blank">
-          <img src="https://img.shields.io/badge/Poster-PNG-green.svg" alt="Poster">
-        </a>
-      </div>
+    <div class="authors-email">
+      {vasiliki.tassopoulou, hshou, christos.davatzikos}@pennmedicine.upenn.edu
+    </div>
+
+    <div class="paper-links">
+      <a href="https://openreview.net/forum?id=peX9zpWgg4" target="_blank">
+        <img src="https://img.shields.io/badge/Paper-OpenReview-blue.svg" alt="Paper">
+      </a>
+      <a href="https://github.com/vatass/AdaptiveShrinkageDKGP" target="_blank">
+        <img src="https://img.shields.io/badge/Code-GitHub-black.svg" alt="GitHub">
+      </a>
+      <a href="https://iclr.cc/media/iclr-2025/Slides/28284.pdf" target="_blank">
+        <img src="https://img.shields.io/badge/Slides-PDF-red.svg" alt="Slides">
+      </a>
+      <a href="https://iclr.cc/media/PosterPDFs/ICLR%202025/28284.png?t=1744255974.325819" target="_blank">
+        <img src="https://img.shields.io/badge/Poster-PNG-green.svg" alt="Poster">
+      </a>
     </div>
   </div>
 

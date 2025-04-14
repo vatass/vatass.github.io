@@ -429,16 +429,11 @@ bands represent the predictive uncertainty over time.</em>
     </div>
   </div>
 
-  <h2> Explaining the Adaptive Shrinkage</h2>
-
-
-
   <h2>Why It Matters: Improved Forecasting and Clinical Relevance</h2>
 
-  Our method significantly outperforms traditional models in predicting brain biomarker trajectories. We tested it on multiple neuroimaging studies, including **Alzheimer's Disease Neuroimaging Initiative (ADNI)** and **Baltimore Longitudinal Study of Aging (BLSA)**, as well as independent external datasets. Results showed:
+  Our method outperforms traditional models in predicting brain biomarker trajectories. We tested it on multiple neuroimaging studies, including **Alzheimer's Disease Neuroimaging Initiative (ADNI)** and **Baltimore Longitudinal Study of Aging (BLSA)**, as well as independent external datasets. Results showed:
 
   - Higher predictive accuracy compared to state-of-the-art machine learning and statistical methods.
-  - Improved uncertainty quantification, ensuring more reliable forecasts.
   - Robust generalization across different neuroimaging cohorts, demonstrating clinical applicability.
 
   While our study focuses on neuroimaging data, our method has broad applications in:

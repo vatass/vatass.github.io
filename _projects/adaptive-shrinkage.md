@@ -368,17 +368,17 @@ title: "Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in
 
   <h2>Abstract</h2>
 
-  Understanding how brain biomarkers change over time is crucial for diagnosing and tracking neurological diseases like Alzheimer's. However, predicting these biomarker trajectories is challenging due to biological variability, inconsistent imaging protocols, and sparse, irregular data collection. Our recent work, presented at **ICLR 2025**, introduces a new approach that tackles the afforementioned challenges: **Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression**. This method provides a more accurate and personalized way to model brain changes over time.
+  Understanding how brain biomarkers change over time is crucial for diagnosing and tracking neurological diseases like Alzheimer's. However, predicting these biomarker trajectories is challenging due to biological variability, inconsistent imaging protocols, and sparse, irregular data collection. Our recent work, presented at <strong>ICLR 2025</strong>, introduces a new approach that tackles the afforementioned challenges: <strong>Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression</strong>. This method provides a more accurate and personalized way to model brain changes over time.
 
   <h2>The Challenge: Predicting Brain Biomarkers Accurately</h2>
   Longitudinal neuroimaging studies track changes in brain structure, but the data is often incomplete or misaligned across individuals. Traditional statistical models, such as linear mixed-effects models and generalized additive models, struggle to capture complex, non-linear brain trajectory patterns. On the other hand, deep learning models can learn from vast amounts of data but may not adapt well to individual patient variations.
 
   <h2>Our Solution: Adaptive Shrinkage Estimation with Deep Kernel Learning</h2>
 
-  We propose a novel framework that balances global population trends with individual-specific nuances. Our approach, **Deep Kernel Gaussian Processes with Adaptive Shrinkage Estimation**, integrates two components:
+  We propose a novel framework that balances global population trends with individual-specific nuances. Our approach, <strong>Deep Kernel Gaussian Processes with Adaptive Shrinkage Estimation</strong>, integrates two components:
 
-  - **Population Model (p-DKGP):** Trained on large and longitudinally rich biomarker datasets to learn heterogeneous trajectory trends.
-  - **Subject-Specific Model (ss-DKGP):** Personalized predictions based on an individual's follow-up data.
+  - <strong>Population Model (p-DKGP):</strong> Trained on large and longitudinally rich biomarker datasets to learn heterogeneous trajectory trends.
+  - <strong>Subject-Specific Model (ss-DKGP):</strong> Personalized predictions based on an individual's follow-up data.
 
   As shown in the figure above, our method combines these components through Adaptive Shrinkage Estimation to create personalized predictions that are more accurate than either component alone.
 
@@ -450,7 +450,7 @@ bands represent the predictive uncertainty over time.</em>
 
   <h2>Why It Matters: Improved Forecasting and Clinical Relevance</h2>
 
-  Our method outperforms traditional models in predicting brain biomarker trajectories. We tested it on multiple neuroimaging studies, including **Alzheimer's Disease Neuroimaging Initiative (ADNI)** and **Baltimore Longitudinal Study of Aging (BLSA)**, as well as independent external datasets. Results showed:
+  Our method outperforms traditional models in predicting brain biomarker trajectories. We tested it on multiple neuroimaging studies, including <strong>Alzheimer's Disease Neuroimaging Initiative (ADNI)</strong> and <strong>Baltimore Longitudinal Study of Aging (BLSA)</strong>, as well as independent external datasets. Results showed:
 
   - Higher predictive accuracy compared to state-of-the-art machine learning and statistical methods.
   - Robust generalization across different neuroimaging cohorts, demonstrating clinical applicability.

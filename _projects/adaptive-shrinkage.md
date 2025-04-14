@@ -32,7 +32,7 @@ title: "Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in
     color: #2c3e50;
     text-align: center;
     max-width: 90%;
-    font-weight: bold;
+    font-weight: 700;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -301,6 +301,25 @@ title: "Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in
     max-width: 85%;
     color: #666;
     font-size: 0.95em;
+  }
+
+  /* Bold text styling */
+  strong, b {
+    font-weight: 700 !important;
+    color: #000000;
+  }
+
+  .project-container strong,
+  .project-container b {
+    font-weight: 700 !important;
+    color: #000000;
+  }
+
+  /* Make sure markdown bold text is visible */
+  p strong, p b,
+  li strong, li b {
+    font-weight: 700 !important;
+    color: #000000;
   }
 </style>
 

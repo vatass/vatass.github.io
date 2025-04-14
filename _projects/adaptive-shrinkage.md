@@ -452,13 +452,17 @@ bands represent the predictive uncertainty over time.</em>
 
   Our method outperforms traditional models in predicting brain biomarker trajectories. We tested it on multiple neuroimaging studies, including <strong>Alzheimer's Disease Neuroimaging Initiative (ADNI)</strong> and <strong>Baltimore Longitudinal Study of Aging (BLSA)</strong>, as well as independent external datasets. Results showed:
 
-  - Higher predictive accuracy compared to state-of-the-art machine learning and statistical methods.
-  - Robust generalization across different neuroimaging cohorts, demonstrating clinical applicability.
+  <ul style="list-style-type: disc; margin-left: 20px; margin-bottom: 20px;">
+    <li>Higher predictive accuracy compared to state-of-the-art machine learning and statistical methods.</li>
+    <li>Robust generalization across different neuroimaging cohorts, demonstrating clinical applicability.</li>
+  </ul>
 
   While our study focuses on neuroimaging data, our method has broad applications in:
 
-  - **Disease progression modeling**
-  - **Clinical trial optimization**
+  <ul style="list-style-type: disc; margin-left: 20px; margin-bottom: 20px;">
+    <li><strong>Disease progression modeling</strong></li>
+    <li><strong>Clinical trial optimization</strong></li>
+  </ul>
 
   By integrating our approach into real-world healthcare settings, we can enhance early diagnosis, track disease progression more effectively, and tailor treatments to individual patients.
 

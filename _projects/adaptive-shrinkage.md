@@ -373,7 +373,10 @@ title: "Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in
   <h2>The Challenge: Predicting Brain Biomarkers Accurately</h2>
   Longitudinal neuroimaging studies track changes in brain structure, but the data is often incomplete or misaligned across individuals. Traditional statistical models, such as linear mixed-effects models and generalized additive models, struggle to capture complex, non-linear brain trajectory patterns. On the other hand, deep learning models can learn from vast amounts of data but may not adapt well to individual patient variations.
 
-  <h2>Our Solution: Adaptive Shrinkage Estimation with Deep Kernel Learning</h2>
+  <h2>Datasets</h2>
+  We use data from the iSTAGING Consortium <strong>[Habes et al., 2021]</strong>. Our input consists of volumetric ROIs along with clinical covariates of Age, Sex, Diagnosis, Education Years and APOE4 Alleles at Baseline and the Time variable that represents the time in months from the baseline. The consortium has made significant contributions to understanding brain aging <strong>[Habes et al., 2016]</strong> and has been instrumental in developing advanced machine learning approaches for analyzing brain trajectories <strong>[Beygelzimer et al., 2021]</strong>.
+
+  <h2>Adaptive Shrinkage Estimation with Deep Kernel Learning</h2>
 
   We propose a novel framework that balances global population trends with individual-specific nuances. Our approach, <strong>Deep Kernel Gaussian Processes with Adaptive Shrinkage Estimation</strong>, integrates two components:
 
@@ -468,7 +471,21 @@ bands represent the predictive uncertainty over time.</em>
 
   <h2>Citation</h2>
 
-  TBD.
+  Published as a conference paper at ICLR 2025
+
+  <h2>References</h2>
+
+  <div style="padding-left: 20px; text-indent: -20px;">
+    Beygelzimer, A., Dauphin, Y., Liang, P.S., and Wortman Vaughan, J. (eds.). Advances in Neural Information Processing Systems, volume 34, pp. 23780–23792. Curran Associates, Inc., 2021. URL <a href="https://proceedings.neurips.cc/paper_files/paper/2021/file/c7b90b0fc23725f299b47c5224e6ec0d-Paper.pdf">https://proceedings.neurips.cc/paper_files/paper/2021/file/c7b90b0fc23725f299b47c5224e6ec0d-Paper.pdf</a>
+  </div>
+
+  <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
+    Habes, M., Janowitz, D., Erus, G., Toledo, J.B., Resnick, S.M., Doshi, J., van der Auwera, S., Wittfeld, K., Hegenscheid, K., Hosten, N., Biffar, R., Homuth, G., Völzke, H., Grabe, H.J., Hoffmann, W., and Davatzikos, C. Advanced brain aging: Relationship with epidemiologic and genetic risk factors, and overlap with Alzheimer disease atrophy patterns. Translational Psychiatry, 6(4):e775, 2016. doi: 10.1038/tp.2016.39. PMID: 27045845; PMCID: PMC4872397.
+  </div>
+
+  <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
+    Habes, M., Pomponio, R., Shou, H., Doshi, J., Mamourian, E., Erus, G., Nasrallah, I., Launer, L.J., Rashid, T., Bilgel, M., et al. The Brain Chart of Aging: machine-learning analytics reveals links between brain aging, white matter disease, amyloid burden, and cognition in the iSTAGING consortium of 10,216 harmonized MR scans. Alzheimer's & Dementia, 17(1):89–102, 2021.
+  </div>
 </div>
 
 

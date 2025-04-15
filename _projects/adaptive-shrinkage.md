@@ -460,7 +460,10 @@ bands represent the predictive uncertainty over time.</em>
     <li>Robust generalization across different neuroimaging cohorts, demonstrating clinical applicability.</li>
   </ul>
 
-  While our study focuses on neuroimaging data, our method has broad applications in:
+  While our study focuses on neuroimaging biomarkers, if can be used for predicting  the progression of longitudinal biomarkers using multivariate imaging data and clinical covariates. Examples of such biomarkers are the cognitive scores (e.g., MMSE,
+  ADAS-Cog13) and blood biomarkers (e.g., Amyloid-β, Tau protein).
+  
+  Our method has broad applications in:
 
   <ul style="list-style-type: disc; margin-left: 20px; margin-bottom: 20px;">
     <li><strong>Disease progression modeling</strong></li>
@@ -470,8 +473,6 @@ bands represent the predictive uncertainty over time.</em>
   By integrating our approach into real-world healthcare settings, we can enhance early diagnosis, track disease progression more effectively, and tailor treatments to individual patients.
 
   <h2>Citation</h2>
-
-  Published as a conference paper at ICLR 2025
 
   <div style="font-family: monospace; background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0;">
     @misc{tassopoulou2025adaptiveshrinkageestimationpersonalized,<br>
@@ -486,6 +487,10 @@ bands represent the predictive uncertainty over time.</em>
   </div>
 
   <h2>References</h2>
+
+  <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
+    Doshi, J., Erus, G., Ou, Y., Resnick, S.M., Gur, R.C., Gur, R.E., Satterthwaite, T.D., Furth, S., and Davatzikos, C. MUSE: MUlti-atlas region Segmentation utilizing Ensembles of registration algorithms and parameters, and locally optimal atlas selection. NeuroImage, 127:186–195, 2016. doi: 10.1016/j.neuroimage.2015.11.073
+  </div>
 
   <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
     Habes, M., Pomponio, R., Shou, H., Doshi, J., Mamourian, E., Erus, G., Nasrallah, I., Launer, L.J., Rashid, T., Bilgel, M., et al. The Brain Chart of Aging: machine-learning analytics reveals links between brain aging, white matter disease, amyloid burden, and cognition in the iSTAGING consortium of 10,216 harmonized MR scans. Alzheimer's & Dementia, 17(1):89–102, 2021.

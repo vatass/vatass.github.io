@@ -475,14 +475,6 @@ bands represent the predictive uncertainty over time.</em>
 
   <h2>References</h2>
 
-  <div style="padding-left: 20px; text-indent: -20px;">
-    Beygelzimer, A., Dauphin, Y., Liang, P.S., and Wortman Vaughan, J. (eds.). Advances in Neural Information Processing Systems, volume 34, pp. 23780–23792. Curran Associates, Inc., 2021. URL <a href="https://proceedings.neurips.cc/paper_files/paper/2021/file/c7b90b0fc23725f299b47c5224e6ec0d-Paper.pdf">https://proceedings.neurips.cc/paper_files/paper/2021/file/c7b90b0fc23725f299b47c5224e6ec0d-Paper.pdf</a>
-  </div>
-
-  <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
-    Habes, M., Janowitz, D., Erus, G., Toledo, J.B., Resnick, S.M., Doshi, J., van der Auwera, S., Wittfeld, K., Hegenscheid, K., Hosten, N., Biffar, R., Homuth, G., Völzke, H., Grabe, H.J., Hoffmann, W., and Davatzikos, C. Advanced brain aging: Relationship with epidemiologic and genetic risk factors, and overlap with Alzheimer disease atrophy patterns. Translational Psychiatry, 6(4):e775, 2016. doi: 10.1038/tp.2016.39. PMID: 27045845; PMCID: PMC4872397.
-  </div>
-
   <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
     Habes, M., Pomponio, R., Shou, H., Doshi, J., Mamourian, E., Erus, G., Nasrallah, I., Launer, L.J., Rashid, T., Bilgel, M., et al. The Brain Chart of Aging: machine-learning analytics reveals links between brain aging, white matter disease, amyloid burden, and cognition in the iSTAGING consortium of 10,216 harmonized MR scans. Alzheimer's & Dementia, 17(1):89–102, 2021.
   </div>

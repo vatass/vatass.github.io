@@ -3,6 +3,9 @@
 <div class="news-section" style="margin-top: 20px; margin-bottom: 40px;">
   <ul class="news-list" style="list-style-type: none; padding-left: 0;">
     <li class="news-item" style="margin-bottom: 15px; color: #000; font-weight: 500;">
+      🎉 <strong style="color: #000;">September 2025</strong>: Our paper "" has been accepted as poster at NeuRIPS 2025! See you in San Diego! 🇺🇸 🌊 🌴
+    </li>
+    <li class="news-item" style="margin-bottom: 15px; color: #000; font-weight: 500;">
       🎉 <strong style="color: #000;">March 2025</strong>: I will co-organize the WiML Social @ ICLR 2025!
     </li>
     <li class="news-item" style="margin-bottom: 15px; color: #000; font-weight: 500;">

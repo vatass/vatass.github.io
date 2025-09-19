@@ -475,14 +475,10 @@ bands represent the predictive uncertainty over time.</em>
   <h2>Citation</h2>
 
   <div style="font-family: monospace; background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0;">
-    @misc{tassopoulou2025adaptiveshrinkageestimationpersonalized,<br>
-    &nbsp;&nbsp;title={Adaptive Shrinkage Estimation For Personalized Deep Kernel Regression In Modeling Brain Trajectories},<br>
-    &nbsp;&nbsp;author={Vasiliki Tassopoulou and Haochang Shou and Christos Davatzikos},<br>
-    &nbsp;&nbsp;year={2025},<br>
-    &nbsp;&nbsp;eprint={2504.08840},<br>
-    &nbsp;&nbsp;archivePrefix={arXiv},<br>
-    &nbsp;&nbsp;primaryClass={cs.LG},<br>
-    &nbsp;&nbsp;url={https://arxiv.org/abs/2504.08840},<br>
+    @inproceedings{tassopoulouadaptive,<br>
+    &nbsp;&nbsp;title={Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories},<br>
+    &nbsp;&nbsp;author={Tassopoulou, Vasiliki and Shou, Haochang and Davatzikos, Christos},<br>
+    &nbsp;&nbsp;booktitle={The Thirteenth International Conference on Learning Representations}<br>
     }
   </div>
 

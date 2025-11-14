@@ -42,28 +42,43 @@ We introduce an **uncertainty-calibrated progression metric**, the **Rate-of-Cha
 
 - **Group-conditional calibration.** For predefined covariate groups, we repeat the calibration step within each group to obtain **group-specific bands** with valid coverage for that subgroup.
 
-- **Clinical utility via RoCB.** For each subject, we compute the RoCB as the slope implied by the **lower conformal bound** between baseline and a future time p
+- **Clinical utility via RoCB.** For each subject, we compute the RoCB as the slope implied by the **lower conformal bound** between baseline and a future time point. This yields an uncertainty-aware progression marker used to stratify MCI subjects by risk of Alzheimer’s progression.
 
+## Results
+
+- **Coverage and efficiency.** Across hippocampal and ventricular volume trajectories, baseline models either substantially under- or over-cover. After conformalization, **all models achieve the target coverage (e.g., 90%)** while maintaining **tighter bands** than model-based uncertainty baselines.
+
+- **Subgroup robustness.** Population-level conformal bands can still miscover specific groups (e.g., MCI subjects, APOE4 carriers, certain racial subgroups). Group-conditional conformal bands **restore nominal coverage across all examined subpopulations**, supporting fairer and more reliable deployment.
+
+- **High-risk subject identification.** Using RoCB on MCI subjects improves identification of those at high risk of progression to Alzheimer’s disease, yielding **17.5% more high-risk subjects** compared to standard predicted rate-of-change metrics, with uncertainty explicitly accounted for.
+
+Overall, the framework turns black-box trajectory predictors into **uncertainty-calibrated tools** suitable for early risk stratification, clinical trial enrichment, and cautious clinical decision support.
 
 ## Publications
 
-- Tassopoulou, V., [Co-authors]. (2025). "Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories with Conformal Bands." *Conference on Neural Information Processing Systems (NeurIPS)*.
+- Tassopoulou, V., Stamouli, C., Shou, H., Pappas, G. J., Davatzikos, C. (2025).  
+  **“Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories with Conformal Bands.”**  
+  *Advances in Neural Information Processing Systems (NeurIPS).*
 
 ## Collaborators
 
-[Add collaborator information here]
+- **Vasiliki Tassopoulou** – Lead author  
+- **Charis Stamouli**  
+- **Haochang Shou**  
+- **George J. Pappas**  
+- **Christos Davatzikos**
 
 ## Code and Data
 
-[Add links to code repositories and datasets if available]
+- **Code:** [github.com/vatass/ConformalBiomarkerTrajectories](https://github.com/vatass/ConformalBiomarkerTrajectories)  
+- **Data:** Real-world longitudinal neuroimaging cohorts of aging and Alzheimer’s disease (access subject to data-use agreements).
 
 ## Citation
 
 ```bibtex
-@article{tassopoulou2025uncertainty,
-  title={Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories with Conformal Bands},
-  author={Tassopoulou, Vasiliki and [Co-authors]},
-  journal={Advances in Neural Information Processing Systems},
-  year={2025}
+@inproceedings{tassopoulou2025uncertainty,
+  title     = {Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories with Conformal Bands},
+  author    = {Tassopoulou, Vasiliki and Stamouli, Charis and Shou, Haochang and Pappas, George J. and Davatzikos, Christos},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2025}
 }
-```

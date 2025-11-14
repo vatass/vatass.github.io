@@ -91,13 +91,18 @@ body_class: projects-page
   line-height: 1.6;
   margin-bottom: 2rem;
 }
+
+.project-content strong,
+.project-content b {
+  font-weight: 700 !important;
+}
 </style>
 
 <h1 class="page-title">Research Projects</h1>
 
-<p class="page-description">
+<!-- <p class="page-description">
   Explore my research projects focused on machine learning and deep learning applications in healthcare, particularly in neuroimaging and Alzheimer's Disease research.
-</p>
+</p> -->
 
 <div class="project-grid">
   <div class="project-card">
@@ -106,10 +111,25 @@ body_class: projects-page
     </div>
     <div class="project-content">
       <h2>Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression</h2>
-      <p>Developing novel methods for predicting personalized brain aging trajectories using a combination of deep learning and Gaussian processes with adaptive shrinkage estimation.</p>
+      <p> A method for predicting personalized biomarker tragectories using deep kernel regression with adaptive shrinkage 
+      estimation. Presented at <strong> ICLR 2025 </strong>. </p>
       <a href="/projects/adaptive-shrinkage/" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
 
   <!-- Additional projects can be added here in the future -->
+
+  <div class="project-card">
+    <div class="project-image">
+      <img src="/assets/img/projects/uq_webpage_thumbnail.png" alt="Conformal Prediction for Randomly-Timed Biomarker Trajectories">
+    </div>
+    <div class="project-content">
+      <h2>Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories</h2>
+      <p>A conformal prediction method for randomly-timed biomarker trajectories, enabling uncertainty quantification and improved high-risk subject identification. Presented at <strong>NeurIPS 2025</strong>.</p>
+      <a href="/projects/uncertainty-calibrated-prediction/" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+
+
 </div> 

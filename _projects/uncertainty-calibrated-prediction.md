@@ -373,7 +373,7 @@ permalink: /projects/uncertainty-calibrated-prediction/
 
 <h2>Motivation and Problem Statement </h2>
 
-Biomarker measurements are collected at <strong>irregular and patient-specific visit times</strong>, and are affected by substantial <strong>measurement noise</strong> as well as <strong> disease hetegogeneity </strong> . These sources of variability make patient trajectories difficult to model, often leading trajectory predictors to produce unreliable or inaccurate forecasts
+Biomarker measurements are collected at <strong>irregular and patient-specific visit times</strong>, and are affected by  <strong>measurement noise</strong> as well as <strong> disease hetegogeneity </strong> . These sources of variability make patient trajectories difficult to predict, often leading trajectory predictors to produce unreliable or inaccurate forecasts
 
 Trajectory predictors (e.g., deep kernel GPs, Regression models) generate point forecasts or heuristic uncertainty estimates, but these are often <strong>miscalibrated</strong>—either too narrow (overconfident) or too wide (overly conservative). Miscalibrated uncertainty can obscure high-risk patients or mistakenly flag stable individuals.
 
@@ -385,7 +385,7 @@ We observe data from \(N\) subjects:
 \[
 (X^{(1)}, Y^{(1)}, \mathcal{T}^{(1)}), \ldots, (X^{(N)}, Y^{(N)}, \mathcal{T}^{(N)}),
 \]
-where each subject has covariates \(X^{(i)}\), a biomarker trajectory \(Y^{(i)}\), and an irregular set of observation times \(\mathcal{T}^{(i)}\). The data distribution is arbitrary and may include heterogeneity, noise, and irregular timing.
+where each subject has covariates \(X^{(i)}\), a biomarker trajectory \(Y^{(i)}\), and a randompy-timed set of observation times \(\mathcal{T}^{(i)}\). The data distribution is arbitrary and may include heterogeneity, noise, and irregular timing.
 
 A black-box trajectory predictor (e.g., DKGP, Regression model) produces predicted trajectories:
 \[
@@ -402,7 +402,6 @@ This framework must:
 <ul>
 <li>Accommodate <strong>arbitrary data distributions</strong>  </li>
 <li>Work with <strong>arbitrary predictive models</strong>  </li>
-<li>Provide <strong>trajectory-level</strong> (not pointwise) coverage guarantees  </li>
 </ul>
 
 

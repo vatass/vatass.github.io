@@ -373,11 +373,11 @@ permalink: /projects/uncertainty-calibrated-prediction/
 
 <h2>Motivation and Problem Statement </h2>
 
-Biomarker measurements are collected at <strong>irregular and patient-specific visit times</strong>, and are affected by substantial <strong>measurement noise</strong> as well as the <strong>heterogeneity</strong> of the disease. These sources of variability make it difficult to reliably forecast a patient’s future trajectory and thus trajectory predictos make mistakes.
+Biomarker measurements are collected at <strong>irregular and patient-specific visit times</strong>, and are affected by substantial <strong>measurement noise</strong> as well as <strong> disease hetegogeneity </strong> . These sources of variability make patient trajectories difficult to model, often leading trajectory predictors to produce unreliable or inaccurate forecasts
 
 Trajectory predictors (e.g., deep kernel GPs, Regression models) generate point forecasts or heuristic uncertainty estimates, but these are often <strong>miscalibrated</strong>—either too narrow (overconfident) or too wide (overly conservative). Miscalibrated uncertainty can obscure high-risk patients or mistakenly flag stable individuals.
 
-To enable trustworthy use in <strong>clinical care</strong>, <strong>risk stratification</strong>, and <strong>clinical trial enrichment</strong>, we require <strong>uncertainty-calibrated prediction bands</strong> that remain valid for *entire future trajectories*, not just individual timepoints.
+To enable trustworthy use in <strong>clinical care</strong> and  <strong>risk stratification</strong>, we require <strong>uncertainty-calibrated prediction bands</strong> that remain valid for <strong> entire future trajectories </strong>, not just individual timepoints.
 
 <h3> <strong>Problem Statement</strong> </h3>
 
@@ -417,7 +417,7 @@ This framework must:
 
 <h2> Conformal Prediction for Randomly-Timed Trajectories </h2>
 
-<p> To address the randomly-timed measurements within a biomarker trajectory, we compute a  trajectory-wide nonconformity score that measures the normalized deviation between the observed and predicted 
+<p> To address the randomly-timed measurements within a biomarker trajectory, we compute a trajectory-wide nonconformity score that measures the normalized absolute error between the observed and predicted 
 trajectory for each subject \(i\). The score is defined as:
 </p>
 
@@ -678,11 +678,25 @@ year      = {2025}
 
 <h2>References</h2>
 
-  <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
-    Doshi, J., Erus, G., Ou, Y., Resnick, S.M., Gur, R.C., Gur, R.E., Satterthwaite, T.D., Furth, S., and Davatzikos, C. MUSE: MUlti-atlas region Segmentation utilizing Ensembles of registration algorithms and parameters, and locally optimal atlas selection. NeuroImage, 127:186–195, 2016. doi: 10.1016/j.neuroimage.2015.11.073
-  </div>
 
   <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
     Habes, M., Pomponio, R., Shou, H., Doshi, J., Mamourian, E., Erus, G., Nasrallah, I., Launer, L.J., Rashid, T., Bilgel, M., et al. The Brain Chart of Aging: machine-learning analytics reveals links between brain aging, white matter disease, amyloid burden, and cognition in the iSTAGING consortium of 10,216 harmonized MR scans. Alzheimer's & Dementia, 17(1):89–102, 2021.
   </div>
+  <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
+    Tassopoulou, V., Yu, F., and Davatzikos, C. 
+    Deep Kernel Learning with Temporal Gaussian Processes for Clinical Variable Prediction in Alzheimer’s Disease.
+    Proceedings of the 2nd Machine Learning for Health Symposium, 
+    pp. 539–551, 2022. 
+    PMLR, Volume 193. 
+    <a href="https://proceedings.mlr.press/v193/tassopoulou22a/tassopoulou22a.pdf" target="_blank">PDF</a> · 
+    <a href="https://proceedings.mlr.press/v193/tassopoulou22a.html" target="_blank">Link</a>
+  </div>
+
+  <div style="padding-left: 20px; text-indent: -20px; margin-top: 1em;">
+  Chung, I., Kim, S., Lee, J., Kim, K. J., Hwang, S. J., and Yang, E. 
+  Deep Mixed Effect Model using Gaussian Processes: A Personalized and Reliable Prediction for Healthcare.
+  arXiv preprint arXiv:1806.01551, 2019. 
+  <a href="https://arxiv.org/abs/1806.01551" target="_blank">Link</a>
+  </div>
+
 </div>

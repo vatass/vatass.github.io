@@ -332,16 +332,16 @@ permalink: /projects/conformal-biomarker-trajectories/
   <div class="authors-section">
     <div class="authors-names">
       <span class="author-name">Vasiliki Tassopoulou<span class="author-superscript">1,2,*</span></span>,
-      <span class="author-name">Charis Stamouli<span class="author-superscript">2,*</span></span>,
-      <span class="author-name">Haochang Shou<span class="author-superscript">1,3</span></span>, 
-      <span class="author-name">George J. Pappas<span class="author-superscript">1,4</span></span>, 
+      <span class="author-name">Charis Stamouli<span class="author-superscript">3,*</span></span>,
+      <span class="author-name">Haochang Shou<span class="author-superscript">1,4</span></span>, 
+      <span class="author-name">George J. Pappas<span class="author-superscript">3</span></span>, 
       <span class="author-name">Christos Davatzikos<span class="author-superscript">1,2,3</span></span>
     </div>
 
     <div class="affiliations">
       <div class="affiliation-item"><span class="affiliation-number">1</span>Center for AI and Data Science for Integrated Diagnostics, University of Pennsylvania</div>
       <div class="affiliation-item"><span class="affiliation-number">2</span>Department of Bioengineering, University of Pennsylvania</div>
-      <div class="affiliation-item"><span class="affiliation-number">2</span>Department of Electrical and Systems Engineering, University of Pennsylvania</div>
+      <div class="affiliation-item"><span class="affiliation-number">3</span>Department of Electrical and Systems Engineering, University of Pennsylvania</div>
       <div class="affiliation-item"><span class="affiliation-number">3</span>Department of Biostatistics, Epidemiology and Informatics, University of Pennsylvania</div>
     </div>
 

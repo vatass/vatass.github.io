@@ -332,7 +332,7 @@ permalink: /projects/conformal-biomarker-trajectories/
   <div class="authors-section">
     <div class="authors-names">
       <span class="author-name">Vasiliki Tassopoulou<span class="author-superscript">1,2,*</span></span>,
-      <span class="author-name">Charis Stamouli<span class="author-superscript">3,*</span></span>,
+      <span class="author-name">Charis Stamouli<span class="author-superscript">2,*</span></span>,
       <span class="author-name">Haochang Shou<span class="author-superscript">1,3</span></span>, 
       <span class="author-name">George J. Pappas<span class="author-superscript">1,4</span></span>, 
       <span class="author-name">Christos Davatzikos<span class="author-superscript">1,2,3</span></span>

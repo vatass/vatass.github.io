@@ -126,7 +126,7 @@ body_class: projects-page
     <div class="project-content">
       <h2>Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories</h2>
       <p>A conformal prediction method for randomly-timed biomarker trajectories, enabling uncertainty quantification and improved high-risk subject identification. Presented at <strong>NeurIPS 2025</strong>.</p>
-      <a href="/projects/uncertainty-calibrated-prediction/" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      <a href="/projects/conformal-biomarker-trajectories/" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
 

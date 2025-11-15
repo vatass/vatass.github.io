@@ -1,11 +1,29 @@
 main:
+  - title: "Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories with Conformal Bands"
+    authors: "<strong>Vasiliki Tassopoulou*</strong>, Charis Stamouli*, Haochang Shou, George J. Pappas, Christos Davatzikos"
+    conference_short: NeuRIPS
+    conference: "The Thirty-ninth Annual Conference on Neural Information Processing Systems <strong>(NeuRIPS)</strong>, 2025"
+    url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A4-oSJIAAAAJ&authuser=1&citation_for_view=A4-oSJIAAAAJ:YsMSGLbcyi4C"
+    pdf: "https://openreview.net/pdf?id=jusQeCotOF"
+    bibtex: "@inproceedings{tassopoulou2025uncertainty,
+title     = {Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories with Conformal Bands},
+author    = {Tassopoulou, Vasiliki and Stamouli, Charis and Shou, Haochang and Pappas, George J. and Davatzikos, Christos},
+booktitle = {Advances in Neural Information Processing Systems},
+year      = {2025}
+}"
+    code: "https://github.com/vatass/ConformalBiomarkerTrajectories"
 
   - title: "Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories"
     authors: "<strong>Vasiliki Tassopoulou</strong>, Haochang Shou, Christos Davatzikos"
     conference_short: ICLR
     conference: "The Thirteenth International Conference on Learning Representations <strong>(ICLR)</strong>, 2025"
-    url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A4-oSJIAAAAJ&authuser=1&citation_for_view=A4-oSJIAAAAJ:Y0pCki6q_DkC"
+    url: "https://openreview.net/forum?id=peX9zpWgg4"
     pdf: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A4-oSJIAAAAJ&authuser=1&citation_for_view=A4-oSJIAAAAJ:Y0pCki6q_DkC"
+    bibtex: "@inproceedings{tassopoulouadaptive,
+  title={Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories},
+  author={Tassopoulou, Vasiliki and Shou, Haochang and Davatzikos, Christos},
+  booktitle={The Thirteenth International Conference on Learning Representations}
+}"
     
   - title: "Generative Models of MRI-Derived Neuroimaging Features and Associated Dataset of 18,000 Samples"
     authors: "Sai Spandana Chintapalli, Rongguang Wang, Zhijian Yang, <strong>Vasiliki Tassopoulou</strong>, Fanyang Yu, Vishnu Bashyam, Guray Erus, Pratik Chaudhari, Haochang Shou, Christos Davatzikos"

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Uncertainty-Calibrated Prediction of Randomly-Timed Biomarker Trajectories with Conformal Bands"
-permalink: /projects/uncertainty-calibrated-prediction/
+permalink: /projects/conformal-biomarker-trajectories/
 ---
 
 <style>

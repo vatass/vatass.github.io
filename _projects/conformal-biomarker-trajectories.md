@@ -513,7 +513,7 @@ bands that are tailored to each subgroup and provide formal coverage guarantees 
       subgroups (e.g., CN, MCI, AD). Calibrating uncertainty within each subgroup enables 
       group-specific coverage guarantees and improves fairness and reliability across diverse populations.
 </em>
-    </em>
+
   </div>
 </div>
 

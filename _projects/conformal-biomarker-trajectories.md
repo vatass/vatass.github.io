@@ -373,7 +373,7 @@ permalink: /projects/conformal-biomarker-trajectories/
 
 <h2>Motivation and Problem Statement </h2>
 
-Biomarker measurements are collected at <strong>irregular and patient-specific visit times</strong>, and are affected by  <strong>measurement noise</strong> as well as <strong> disease hetegogeneity </strong> . These sources of variability make patient trajectories difficult to predict, often leading trajectory predictors to produce unreliable or inaccurate forecasts
+Biomarker measurements are collected at <strong>irregular and patient-specific visit times</strong>, and are affected by  <strong>measurement noise</strong> as well as <strong> disease hetegogeneity </strong> . These sources of variability make patient trajectories difficult to predict, often leading trajectory predictors to produce unreliable or inaccurate forecasts.
 
 Trajectory predictors (e.g., deep kernel GPs, Regression models) generate point forecasts or heuristic uncertainty estimates, but these are often <strong>miscalibrated</strong>—either too narrow (overconfident) or too wide (overly conservative). Miscalibrated uncertainty can obscure high-risk patients or mistakenly flag stable individuals.
 

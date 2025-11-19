@@ -489,7 +489,8 @@ This allows us to assess calibration quality and interval efficiency across dive
   <div class="results-figure">
     <img src="/assets/img/projects/conformal_qualitative_example.png" 
          alt="Conformal Prediction Trajectory Example" 
-         class="results-image">
+         class="results-image"
+         style="max-width: 80%; height: auto;">
     <em>
       Figure 4: Qualitative comparison of prediction bands before and after conformal calibration. 
       DKGP produces overly wide bounds, while DRMC is overconfident and misses later observations. 

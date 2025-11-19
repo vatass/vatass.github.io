@@ -342,7 +342,7 @@ permalink: /projects/conformal-biomarker-trajectories/
       <div class="affiliation-item"><span class="affiliation-number">1</span>Center for AI and Data Science for Integrated Diagnostics, University of Pennsylvania</div>
       <div class="affiliation-item"><span class="affiliation-number">2</span>Department of Bioengineering, University of Pennsylvania</div>
       <div class="affiliation-item"><span class="affiliation-number">3</span>Department of Electrical and Systems Engineering, University of Pennsylvania</div>
-      <div class="affiliation-item"><span class="affiliation-number">3</span>Department of Biostatistics, Epidemiology and Informatics, University of Pennsylvania</div>
+      <div class="affiliation-item"><span class="affiliation-number">4</span>Department of Biostatistics, Epidemiology and Informatics, University of Pennsylvania</div>
     </div>
 
     <div class="authors-email">
@@ -367,17 +367,17 @@ permalink: /projects/conformal-biomarker-trajectories/
 
   <div style="text-align: center;">
     <img src="/assets/img/projects/uq_webpage_thumbnail.png" alt="Conformal Prediction for Randomly-Timed Biomarker Trajetories" class="main-figure">
-    <em>Figure 1: We design conformal prediction bands for randomly-timed biomarker trajectories. Using these bands, we develop an uncertainty-calibrated method of identifying high-risk patients.</em>
+    <em>Figure 1: We design conformal prediction bands for randomly-timed biomarker trajectories. Using these bands, we develop an uncertainty-calibrated method of identifying high-risk Alzheimer's Disease progressors.</em>
   </div>
 
 
 <h2>Motivation and Problem Statement </h2>
 
-Biomarker measurements are collected at <strong>random and patient-specific visit times</strong>, and are affected by  <strong>measurement noise</strong> as well as <strong> disease hetegogeneity </strong> . These sources of variability make patient trajectories difficult to predict, often leading trajectory predictors to produce unreliable or inaccurate forecasts.
+Biomarker measurements are collected at <strong>random and patient-specific visit times</strong>, and are affected by  <strong>measurement noise</strong> as well as <strong> disease hetegogeneity </strong>. These sources of variability make patient trajectories difficult to predict, often leading trajectory predictors to produce unreliable or inaccurate forecasts.
 
 Trajectory predictors (e.g., deep kernel GPs, Regression models) generate point forecasts or heuristic uncertainty estimates, but these are often <strong>miscalibrated</strong>—either too narrow (overconfident) or too wide (overly conservative). Miscalibrated uncertainty can obscure high-risk patients or mistakenly flag stable individuals.
 
-To enable trustworthy use in <strong>clinical care</strong> and  <strong>risk stratification</strong>, we require <strong>uncertainty-calibrated prediction bands</strong> that remain valid for <strong> entire future trajectories </strong>, not just individual timepoints.
+To enable trustworthy use in <strong>clinical care</strong> and  <strong>risk stratification</strong>, we require <strong>uncertainty-calibrated prediction bands</strong> that remain valid for <strong> entire future trajectories </strong>. 
 
 <h3> <strong>Problem Statement</strong> </h3>
 
@@ -387,7 +387,7 @@ We observe data from \(N\) subjects:
 \]
 where each subject has covariates \(X^{(i)}\), a biomarker trajectory \(Y^{(i)}\), and a randompy-timed set of observation times \(\mathcal{T}^{(i)}\). The data distribution is arbitrary and may include heterogeneity, noise, and irregular timing.
 
-A black-box trajectory predictor (e.g., DKGP, Regression model) produces predicted trajectories:
+A trajectory predictor (e.g., DKGP, Regression model) produces predicted trajectories:
 \[
 \widehat{Y}^{(1)}, \ldots, \widehat{Y}^{(N)}.
 \]
@@ -401,7 +401,7 @@ where \(C_t(X)\) may be built from any predictor, regardless of its underlying a
 This framework must:
 <ul>
 <li>Accommodate <strong>arbitrary data distributions</strong>  </li>
-<li>Work with <strong>arbitrary predictive models</strong>  </li>
+<li>Work with <strong>arbitrary trajectory predictors</strong>  </li>
 </ul>
 
 
@@ -410,7 +410,7 @@ This framework must:
 <ul>
   <li>We introduce a new <strong> conformal prediction framework for randomly-timed biomarker trajectories </strong>. </li>
   <li>To address population heterogeneity, we propose group-conditional conformal prediction with formal group-specific coverage guarantees.</li>
-  <li>We introduce an uncertainty-calibrated method, the Rate of Change Bound,  that identifies <strong>17.5% more high-risk MCI patients</strong> who progress to Alzheimer’s Disease compared to baselines.</li>
+  <li>We introduce an uncertainty-calibrated method, the Rate of Change Bound,  that identifies <strong>17.5% more high-risk MCI patients</strong> who progress to Alzheimer’s Disease compared to standard methods.</li>
 </ul>
 
 
@@ -434,7 +434,7 @@ For each timepoint, we compute the standardized absolute error between the true 
 \(Y^{(i)}_t\) and the model prediction \(\hat{Y}^{(i)}_t\), normalized by the model’s predictive uncertainty 
 \(\sigma(\hat{Y}^{(i)}_t)\).  
 Taking the <strong>maximum across all timepoints</strong> ensures that the resulting conformal prediction bands
-provide <strong>simultaneous coverage</strong> over the full future trajectory.
+provide <strong>simultaneous coverage</strong> over the entire future trajectory.
 </p>
 
 <p>

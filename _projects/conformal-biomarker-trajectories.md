@@ -371,6 +371,12 @@ permalink: /projects/conformal-biomarker-trajectories/
   </div>
 
 
+
+<h2> Abstract </h2>
+
+Despite recent progress in predicting biomarker trajectories from real clinical data, uncertainty in the predictions poses high-stakes risks (e.g., misdiagnosis) that limit their clinical deployment. To enable safe and reliable use of such predictions in healthcare, we introduce a conformal method for uncertainty-calibrated prediction of biomarker trajectories resulting from randomly-timed clinical visits of patients. Our approach extends conformal prediction to the setting of randomly-timed trajectories via a novel nonconformity score that produces prediction bands guaranteed to cover the unknown biomarker trajectories with a user-prescribed probability. We apply our method across a wide range of standard and state-of-the-art predictors for two well-established brain biomarkers of Alzheimer's disease, using neuroimaging data from real clinical studies. We observe that our conformal prediction bands consistently achieve the desired coverage, while also being tighter than baseline prediction bands. To further account for population heterogeneity, we develop group-conditional conformal bands and test their coverage guarantees across various demographic and clinically relevant subpopulations. Moreover, we demonstrate the clinical utility of our conformal bands in identifying subjects at high risk of progression to Alzheimer’s disease. Specifically, we introduce an uncertainty-calibrated risk score that enables the identification of 17.5\% more high-risk subjects compared to standard risk scores, highlighting the value of uncertainty calibration in real-world clinical decision making.
+
+
 <h2>Motivation and Problem Statement </h2>
 
 Biomarker measurements are collected at <strong>random and patient-specific visit times</strong>, and are affected by  <strong>measurement noise</strong> as well as <strong> disease hetegogeneity </strong>. These sources of variability make patient trajectories difficult to predict, often leading trajectory predictors to produce unreliable or inaccurate forecasts.
@@ -470,7 +476,7 @@ This allows us to assess calibration quality and interval efficiency across dive
          alt="Conformal Prediction Quantitative Results" 
          class="results-image">
     <em>
-      Figure: (a) Mean coverage and interval width for baseline vs. conformalized predictors 
+      Figure 3: (a) Mean coverage and interval width for baseline vs. conformalized predictors 
       on hippocampal- and ventricular-volume trajectories. Baseline models vary widely in 
       coverage, while all conformalized predictors achieve the target level with competitive 
       interval width. (b) Temporal evolution of the 90% CP-DKGP interval width, which remains 
@@ -485,7 +491,7 @@ This allows us to assess calibration quality and interval efficiency across dive
          alt="Conformal Prediction Trajectory Example" 
          class="results-image">
     <em>
-      Figure: Qualitative comparison of prediction bands before and after conformal calibration. 
+      Figure 4: Qualitative comparison of prediction bands before and after conformal calibration. 
       DKGP produces overly wide bounds, while DRMC is overconfident and misses later observations. 
       After conformalization, CP-DKGP and CP-DRMC adjust their bands to achieve the desired 
       coverage, correcting both over- and under-confidence.
@@ -508,7 +514,7 @@ bands that are tailored to each subgroup and provide formal coverage guarantees 
          alt="Population stratification by Diagnosis" 
          class="results-image">
     <em>
-      Figure 3: Illustration of group-conditional conformal prediction. A heterogeneous population 
+      Figure 5: Illustration of group-conditional conformal prediction. A heterogeneous population 
       with variation in age, sex, diagnosis, and race is stratified into clinically meaningful 
       subgroups (e.g., CN, MCI, AD). Calibrating uncertainty within each subgroup enables 
       group-specific coverage guarantees and improves fairness and reliability across diverse populations.
@@ -546,7 +552,7 @@ prediction intervals calibrated to their subgroup.
          alt="Group-conditional conformal results by covariate" 
          class="results-image">
     <em>
-      Figure 4: Mean coverage for population vs. group-conditional conformal prediction 
+      Figure 6: Mean coverage for population vs. group-conditional conformal prediction 
       across demographic and clinical subgroups. Population-level conformalization often 
       misses the target coverage, while group-conditional calibration consistently meets 
       the desired confidence level across all stratifications.
@@ -608,7 +614,7 @@ bands, providing a conservative indicator of neurodegeneration.
          alt="Uncertainty-aware rate of change bound" 
          class="results-image">
     <em>
-      Figure 5: Illustration of the Rate-of-Change Bound (RoCB). The solid line shows the 
+      Figure 7: Illustration of the Rate-of-Change Bound (RoCB). The solid line shows the 
       standard predicted slope, while the dashed line visualized the RoCB. The RoCB uses the band endpoints to compute an uncertainty-aware estimate of biomarker change.
     </em>
   </div>
@@ -650,7 +656,7 @@ simultaneously reducing false positives among stable MCI subjects.
          alt="Examples" 
          class="results-image">
     <em>
-      Figure 6: Hippocampal-volume trajectories for two MCI subjects. 
+      Figure 8: Hippocampal-volume trajectories for two MCI subjects. 
       Left: a true converter (MCI → AD). The baseline DRMC model produces an overconfident band
       that misses the trajectory and underestimates decline, yielding an RoC estimate that fails 
       to cross the progression threshold. After conformalization (CP-DRMC), the band shifts 

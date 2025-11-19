@@ -350,8 +350,8 @@ permalink: /projects/conformal-biomarker-trajectories/
     </div>
 
     <div class="paper-links">
-      <a href="https://openreview.net/forum?id=jusQeCotOF" target="_blank">
-        <img src="https://img.shields.io/badge/Paper-OpenReview-blue.svg" alt="Paper">
+      <a href="https://arxiv.org/abs/2511.13911" target="_blank">
+        <img src="https://img.shields.io/badge/Paper-arXiv-blue.svg" alt="Paper">
       </a>
       <a href="https://github.com/vatass/ConformalBiomarkerTrajectories" target="_blank">
         <img src="https://img.shields.io/badge/Code-GitHub-black.svg" alt="GitHub">
